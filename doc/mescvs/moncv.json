@@ -1,0 +1,424 @@
+{
+  "basics": {
+    "name": "Zakaria Tozy",
+    "headline": "Data engineer",
+    "email": "Zakaria.tozy@icloud.com",
+    "phone": "0617407077",
+    "location": "Paris",
+    "url": {
+      "label": "",
+      "href": ""
+    },
+    "customFields": [],
+    "picture": {
+      "url": "https://storage.rxresu.me/cm4siud8c3ob2dbpongzzsr4z/pictures/cm4siud8c3ob2dbpongzzsr4z.jpg",
+      "size": 64,
+      "aspectRatio": 1,
+      "borderRadius": 0,
+      "effects": {
+        "hidden": false,
+        "border": false,
+        "grayscale": false
+      }
+    }
+  },
+  "sections": {
+    "summary": {
+      "name": "",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "summary",
+      "content": "<p><strong>Jeune ingénieur en Data Engineering</strong>, avec une <strong>double diplomation</strong> en Systèmes d'Information et Data Science. Passionné par l’optimisation des données et leur transformation en solutions pratiques, je maîtrise <strong>Python</strong> et <strong>SQL</strong>, et je cherche à mettre mes compétences au service de projets innovants.</p>"
+    },
+    "awards": {
+      "name": "Awards",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "awards",
+      "items": []
+    },
+    "certifications": {
+      "name": "Certifications",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "certifications",
+      "items": [
+        {
+          "id": "n559fth9b3twym97taklrvpw",
+          "visible": true,
+          "name": " Introduction to Data Engineering",
+          "issuer": "IBM",
+          "date": "",
+          "summary": "",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "wf6mbt4ibj4bv0gqzscu16ji",
+          "visible": true,
+          "name": "SQL (Advanced)",
+          "issuer": "HackerRank",
+          "date": "",
+          "summary": "",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        }
+      ]
+    },
+    "education": {
+      "name": "Education",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "education",
+      "items": [
+        {
+          "id": "r80gzxeu5s5wy1ha9z3q7ign",
+          "visible": true,
+          "institution": "École Centrale d'Électronique (ECE Paris)",
+          "studyType": "Ingénieur ",
+          "area": "Systéme d'information et Big data analytics",
+          "score": "Top 5%",
+          "date": "Janvier 2024",
+          "summary": "<p>Cours suivis : <strong>Programmation</strong>, <strong>Systèmes d'exploitation</strong>, <strong>Bases de données avancées</strong>, <strong>Technologies Web</strong>, <strong>DevOps</strong>, <strong>Sécurité des Systèmes d'Information</strong>.</p>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "ax9dcyg0388wyzvbgn9dgiwv",
+          "visible": true,
+          "institution": "Institut Polytechnique de Paris (dirigé par l'École Polytechnique - X)",
+          "studyType": "Master 2",
+          "area": "Data Sciences",
+          "score": "Mention Très bien",
+          "date": "Janvier 2024",
+          "summary": "<p>Cours suivis : <strong>Machine Learning</strong>, <strong>Big Data Streaming</strong>, <strong>Cloud Infrastructure</strong>, <strong>Deep Learning</strong>, <strong>NLP</strong>, <strong>Computer Vision</strong>.</p>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        }
+      ]
+    },
+    "experience": {
+      "name": "Experience",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "experience",
+      "items": [
+        {
+          "id": "b5du9mxgvio008etzb848fq5",
+          "visible": true,
+          "company": "AXA Investment Managers",
+          "position": "Data Engineer / Data Analyst",
+          "location": "Paris, France",
+          "date": "Août 2023 - Janv 2024",
+          "summary": "<ul><li><p>Conception et mise en place de <strong>10+ pipelines ETL</strong> pour l’ingestion de données métiers dans un environnement Cloud.</p></li><li><p>Optimisation des modèles de données, migration des pipelines de distribution vers Python 3.9 et Unity Catalog, garantissant un reporting financier précis de <strong>844 milliards d’euros d’actifs</strong> en 2023.</p></li><li><p>Participation à des tests de nouveaux clusters sur <strong>Databricks</strong> et création d’un <strong>Proof of Concept (PoC)</strong> pour l'anonymisation des données sensibles des clients.</p></li><li><p>Création de tableaux de bord pour le département des contrôleurs financiers, facilitant l'accès aux données et les requêtes ad hoc.</p></li><li><p><strong>Calcul des indicateurs de performance</strong> KPIs pour la vision distribuée/manageriale, incluant les indicateurs ME, OV, CIS et FX permettant d'optimiser les décisions stratégiques au sein des équipes.</p></li></ul>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "vby7260vxkakyykxajoy9cw7",
+          "visible": true,
+          "company": "Kalima Blockchain & IoT",
+          "position": "Software Engineer",
+          "location": "Paris, France",
+          "date": "Avril 2022 - Août 2022",
+          "summary": "<ul><li><p>Développement d’un <strong>explorateur de blockchain</strong> avec Java et LevelDB, capable de traiter plus de <strong>1 000 transactions par seconde</strong>.</p></li><li><p>Maintenance et ajout de fonctionnalités pour l'outil d'administration de la blockchain <strong>Kalima</strong> sur <strong>Node.js</strong>.</p></li><li><p>Conception d’un algorithme d’<strong>authentification multisignature</strong> pour sécuriser l'accès aux applications décentralisées (DApps).</p></li></ul>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "zlm4is3td39xvgvnf1grlimb",
+          "visible": true,
+          "company": "Le Crédit Lyonnais - LCL ",
+          "position": "IT",
+          "location": "",
+          "date": "Jav 2020 - Fev 2020",
+          "summary": "<ul><li><p>Réalisation d’une étude sur la <strong>migration d'Office 2010 vers Office 2016</strong>, en analysant les nouvelles fonctionnalités et en validant leur compatibilité avec les besoins des équipes.</p></li><li><p>Exécution de tests sur <strong>23 000 postes de travail</strong> et développement de procédures d’installation pour les logiciels métiers.</p></li></ul>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        }
+      ]
+    },
+    "volunteer": {
+      "name": "Volunteering",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "volunteer",
+      "items": []
+    },
+    "interests": {
+      "name": "Interests",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "interests",
+      "items": []
+    },
+    "languages": {
+      "name": "Languages",
+      "columns": 5,
+      "separateLinks": false,
+      "visible": true,
+      "id": "languages",
+      "items": [
+        {
+          "id": "vuxg3w65km98t2fm03vbzl7t",
+          "visible": true,
+          "name": "Français",
+          "description": " Langue maternelle",
+          "level": 0
+        },
+        {
+          "id": "pexyg7rn0x3bd3uxo9w4j0n6",
+          "visible": true,
+          "name": "Anglais",
+          "description": "Courant (TOEIC : 875)",
+          "level": 0
+        },
+        {
+          "id": "k3lml0d8khr47fd3my326185",
+          "visible": true,
+          "name": "Arabe",
+          "description": "Langue maternelle",
+          "level": 0
+        }
+      ]
+    },
+    "profiles": {
+      "name": "Profiles",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": false,
+      "id": "profiles",
+      "items": [
+        {
+          "id": "x7eeye651wirzkh8qs48f26c",
+          "visible": true,
+          "network": "Linkedin",
+          "username": "zakaria-tozy",
+          "icon": "Linkedin",
+          "url": {
+            "label": "",
+            "href": "https://www.linkedin.com/in/zakaria-tozy/"
+          }
+        }
+      ]
+    },
+    "projects": {
+      "name": "Projects",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "projects",
+      "items": [
+        {
+          "id": "ub4l33dlg514bp36n7e83s75",
+          "visible": true,
+          "name": "Bitcoin Analysis",
+          "description": "Technologies : Python, SQL, Airflow, dbt, Snowflake",
+          "date": "",
+          "summary": "<ul><li><p>Développement d’un pipeline de données pour l’analyse des transactions Bitcoin en utilisant les outils de la modern data stack.</p></li><li><p>Optimisation des processus d’analyse de données massives et automatisation du traitement des données.</p></li></ul>",
+          "keywords": [],
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "e54riq74f5umia5w3ngpfzb1",
+          "visible": true,
+          "name": "Twitter Real-time Analysis",
+          "description": "Technologies : Kafka, NLP, KNN",
+          "date": "",
+          "summary": "<ul><li><p>Création d’une solution de visualisation et classification en temps réel des flux Twitter par topics.</p></li><li><p>Application de modèles de machine learning pour la classification des données non structurées issues des réseaux sociaux.</p></li></ul>",
+          "keywords": [],
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "u2jq6ykq5ealtmr6thwmn00h",
+          "visible": true,
+          "name": "Energy Disaggregation @Capgemini",
+          "description": "Technologies : Numpy, Pandas, Feature Engineering",
+          "date": "",
+          "summary": "<ul><li><p>Extraction de la composante thermosensible de la consommation énergétique en France afin de prévoir la demande future.</p></li><li><p>Amélioration des prévisions énergétiques avec une approche basée sur des techniques avancées de traitement de données.</p></li></ul>",
+          "keywords": [],
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        }
+      ]
+    },
+    "publications": {
+      "name": "Publications",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "publications",
+      "items": []
+    },
+    "references": {
+      "name": "References",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "references",
+      "items": []
+    },
+    "skills": {
+      "name": "Skills",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "skills",
+      "items": [
+        {
+          "id": "dpyw2gj61f9jdcf7aan7v0tv",
+          "visible": true,
+          "name": "Programmation ",
+          "description": "",
+          "level": 0,
+          "keywords": [
+            "Python",
+            "SQL",
+            "Java",
+            "C++",
+            "C#"
+          ]
+        },
+        {
+          "id": "hp68z026o3qs6ywj1z4a7d4u",
+          "visible": true,
+          "name": "Data Engineering",
+          "description": "",
+          "level": 0,
+          "keywords": [
+            "PySpark",
+            "BigQuery",
+            "Data Cleaning",
+            "ETL",
+            "Data Pipelines"
+          ]
+        },
+        {
+          "id": "kwnkvert95nwydnzsdvlinyr",
+          "visible": true,
+          "name": "Cloud & Databases",
+          "description": "",
+          "level": 0,
+          "keywords": [
+            "Databricks",
+            "Snowflake",
+            "GCP",
+            "dbt"
+          ]
+        },
+        {
+          "id": "nnhv6b0zvugecaxy3spt9dah",
+          "visible": true,
+          "name": "Machine Learning & AI ",
+          "description": "",
+          "level": 0,
+          "keywords": [
+            "Scikit-Learn",
+            "Deep Learning",
+            "NLP",
+            "Computer Vision",
+            "LLM"
+          ]
+        },
+        {
+          "id": "r3eukcuq62qhwsa44uwt3g2e",
+          "visible": true,
+          "name": "DevOps",
+          "description": "",
+          "level": 0,
+          "keywords": [
+            "Docker",
+            "CI/CD",
+            "Scrum methodology",
+            "git"
+          ]
+        }
+      ]
+    },
+    "custom": {}
+  },
+  "metadata": {
+    "template": "onyx",
+    "layout": [
+      [
+        [
+          "experience",
+          "summary",
+          "profiles",
+          "education",
+          "projects"
+        ],
+        [
+          "skills",
+          "certifications",
+          "languages",
+          "awards",
+          "references",
+          "publications",
+          "volunteer",
+          "interests"
+        ]
+      ]
+    ],
+    "css": {
+      "value": ".section {\n\toutline: 1px solid #000;\n\toutline-offset: 4px;\n}",
+      "visible": false
+    },
+    "page": {
+      "margin": 14,
+      "format": "a4",
+      "options": {
+        "breakLine": true,
+        "pageNumbers": true
+      }
+    },
+    "theme": {
+      "background": "#ffffff",
+      "text": "#000000",
+      "primary": "#475569"
+    },
+    "typography": {
+      "font": {
+        "family": "PT Sans",
+        "subset": "latin",
+        "variants": [
+          "regular"
+        ],
+        "size": 12.5
+      },
+      "lineHeight": 1.1,
+      "hideIcons": true,
+      "underlineLinks": false
+    },
+    "notes": ""
+  }
+}

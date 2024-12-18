@@ -1,0 +1,65 @@
+{
+    "personal": {
+        "name": "Zakaria TOZY",
+        "title": "Data Engineer",
+        "phone": "06 17 40 70 77",
+        "email": "zakaria.tozy@icloud.com",
+        "github": "zakariatozy",
+        "location": "France"
+    },
+    "experience": [
+        {
+            "title": "Data Engineer",
+            "company": "Entreprise",
+            "location": "Paris, FR",
+            "start_date": "2023-01",
+            "end_date": "present",
+            "description": [
+                "Description des responsabilités",
+                "Technologies utilisées"
+            ],
+            "technologies": [
+                "python",
+                "sql",
+                "spark"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "school": "École",
+            "degree": "Diplôme",
+            "location": "Ville, FR",
+            "start_date": "2018",
+            "end_date": "2023",
+            "details": [
+                "Spécialisation",
+                "Projets principaux"
+            ]
+        }
+    ],
+    "skills": {
+        "languages": [
+            "Python",
+            "SQL",
+            "Java",
+            "Scala"
+        ],
+        "big_data": [
+            "Spark",
+            "Hadoop",
+            "Kafka"
+        ],
+        "cloud": [
+            "AWS",
+            "GCP",
+            "Azure"
+        ],
+        "tools": [
+            "Git",
+            "Docker",
+            "Kubernetes",
+            "Airflow"
+        ]
+    }
+}
