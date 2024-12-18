@@ -1,0 +1,140 @@
+{
+    "personal": {
+        "name": "Zakaria TOZY",
+        "phone": "0617407077",
+        "email": "zakaria.tozy@icloud.com",
+        "linkedin": "zakaria-tozy",
+        "location": "Paris",
+        "summary": "Jeune ingénieur en Data Engineering, avec une double diplomation en Systèmes d'Information et Data Science. Passionné par l'optimisation des données et leur transformation en solutions pratiques."
+    },
+    "experience": [
+        {
+            "company": "AXA Investment Managers",
+            "position": "Data Engineer / Data Analyst",
+            "location": "Paris",
+            "dates": "Août 2023 -- Janvier 2024",
+            "highlights": [
+                "Conception et mise en place de 10+ pipelines ETL pour l'ingestion de données métiers dans un environnement Cloud",
+                "Optimisation des modèles de données, migration vers Python 3.9 et Unity Catalog, gérant 844 milliards d'euros d'actifs",
+                "Participation aux tests Databricks et création d'un PoC pour l'anonymisation des données clients",
+                "Création de tableaux de bord et calcul des KPIs (ME, OV, CIS, FX) pour la vision distribuée/manageriale"
+            ]
+        },
+        {
+            "company": "Kalima Blockchain & IoT",
+            "position": "Software Engineer",
+            "location": "Paris",
+            "dates": "Avril 2022 -- Août 2022",
+            "highlights": [
+                "Développement d'un explorateur de blockchain avec Java et LevelDB, traitant 1000+ transactions/seconde",
+                "Maintenance et ajout de fonctionnalités pour l'outil d'administration blockchain sur Node.js",
+                "Conception d'un algorithme d'authentification multisignature pour les DApps"
+            ]
+        },
+        {
+            "company": "Le Crédit Lyonnais - LCL",
+            "position": "IT",
+            "location": "Paris",
+            "dates": "Janvier 2020 -- Février 2020",
+            "highlights": [
+                "Réalisation d'une étude sur la migration d'Office 2010 vers Office 2016, analyse des fonctionnalités",
+                "Exécution de tests sur 23 000 postes de travail et développement de procédures d'installation"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Bitcoin Analysis",
+            "technologies": "Python, SQL, Airflow, dbt, Snowflake",
+            "highlights": [
+                "Développement d'un pipeline de données pour l'analyse des transactions Bitcoin",
+                "Optimisation des processus d'analyse de données massives et automatisation du traitement"
+            ]
+        },
+        {
+            "name": "Twitter Real-time Analysis",
+            "technologies": "Kafka, NLP, KNN",
+            "highlights": [
+                "Création d'une solution de visualisation et classification en temps réel des flux Twitter",
+                "Application de modèles de machine learning pour la classification des données non structurées"
+            ]
+        },
+        {
+            "name": "Energy Disaggregation @Capgemini",
+            "technologies": "Numpy, Pandas, Feature Engineering",
+            "highlights": [
+                "Extraction de la composante thermosensible de la consommation énergétique en France",
+                "Amélioration des prévisions énergétiques avec des techniques avancées de traitement de données"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "school": "École Centrale d'Électronique (ECE Paris)",
+            "degree": "Ingénieur en Systèmes d'information et Big data analytics",
+            "location": "Paris",
+            "date": "Janvier 2024",
+            "highlights": [
+                "Top 5% de la promotion",
+                "Cours : Programmation, Systèmes d'exploitation, Bases de données avancées, DevOps, Sécurité"
+            ]
+        },
+        {
+            "school": "Institut Polytechnique de Paris",
+            "degree": "Master 2 en Data Sciences",
+            "location": "Paris",
+            "date": "Janvier 2024",
+            "highlights": [
+                "Mention Très bien",
+                "Cours : Machine Learning, Big Data Streaming, Cloud Infrastructure, Deep Learning, NLP"
+            ]
+        }
+    ],
+    "skills": {
+        "programming": [
+            "Python",
+            "SQL",
+            "Java",
+            "C++",
+            "C#"
+        ],
+        "data_engineering": [
+            "PySpark",
+            "BigQuery",
+            "ETL",
+            "Data Pipelines"
+        ],
+        "cloud_databases": [
+            "Databricks",
+            "Snowflake",
+            "GCP",
+            "dbt"
+        ],
+        "machine_learning": [
+            "Scikit-Learn",
+            "Deep Learning",
+            "NLP",
+            "Computer Vision"
+        ],
+        "devops": [
+            "Docker",
+            "CI/CD",
+            "Git",
+            "Scrum methodology"
+        ]
+    },
+    "languages": [
+        {
+            "name": "Français",
+            "level": "Langue maternelle"
+        },
+        {
+            "name": "Anglais",
+            "level": "Courant (TOEIC : 875)"
+        },
+        {
+            "name": "Arabe",
+            "level": "Langue maternelle"
+        }
+    ]
+}

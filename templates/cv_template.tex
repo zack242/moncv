@@ -1,0 +1,36 @@
+% ... (en-tête LaTeX)
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge {{ personal.name }}} \\ \vspace{5pt}
+    \small \faPhone* \texttt{{ personal.phone }} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \texttt{{ personal.email }} \hspace{1pt} $|$ 
+    \hspace{1pt} \faLinkedin \hspace{2pt} \texttt{{ personal.linkedin }} \hspace{1pt} $|$
+    \hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{{ personal.location }}
+    \\ \vspace{-3pt}
+\end{center}
+
+% Summary
+\vspace{1mm}
+{\small \textit{{ personal.summary }}}
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+    {% for exp in experience %}
+    \resumeSubheading
+      { {{- exp.company -}} }{ {{- exp.dates -}} }
+      { {{- exp.position -}} }{ {{- exp.location -}} }
+      \resumeItemListStart
+        {% for highlight in exp.highlights %}
+        \resumeItem{ {{- highlight -}} }
+        {% endfor %}
+      \resumeItemListEnd
+    {% endfor %}
+  \resumeSubHeadingListEnd
+
+% ... (autres sections)
+
+\end{document} 
