@@ -12,7 +12,7 @@ def clean_text(text):
         text = text.replace("%", "\\%")
         return text
     
-    # Remplacer les tirets en début de ligne par des points
+    # Remplacer les tirets en début de ligne par des bullet points
     if text.strip().startswith('-'):
         text = '•' + text.strip()[1:]
     

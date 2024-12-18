@@ -1,0 +1,69 @@
+﻿BENJAMIN ROGOJAN                                            DATA ENGINEER
+  
+ ben.rogojan@acheronanalytics.com            Image result for phone images  555-555-5555                 Image result for location images  Seattle, WA                              benjaminrogojan        
+SUMMARY     
+I am a Seattle based Data Engineer. I have extensive experience designing end-to-end solutions from ETL pipelines, algorithms, databases, websites and other software products for startups and already established corporations. I currently work as a data engineer at a health analytics company.
+________________
+
+
+SKILLS
+LANGUAGES
+	WEB PROGRAMMING 
+	ANALYTICS
+	DATABASE MANAGEMENT
+	Java
+	JQuery
+	Data Modelling 
+	Data Normalization & Warehousing 
+	C#
+	HTML/CSS
+	SQL, MySQL 
+	ETL, Product Development 
+	R, Python, Matlab
+	ASP.NET
+	Visual Studio
+	Oracle, SQLServer, Postgres
+	Powershell, Bash
+	D3.js
+	Tableau
+	AWS - S3, EC2, Redshift 
+	________________
+
+
+EXPERIENCE
+Data Engineer | Healthentic |Seattle, WA | Oct 2016 - Present                                                                  
+* Researched and produced 2 algorithms to help discover healthcare costs savings of over 500,000 USD  and improve patient treatment
+* Collaborated and engineered 3 new software products using SQL, Powershell and Python to help reduce healthcare provider fraud, waste, quality and opioid misuse 
+* Independently improved major bottlenecks in algorithm and metric processing by decreasing run time by 25%
+* Migrated 1 TB data warehouse including stored procedures, triggers, and ETLs from Oracle to SQL Server
+HIGHLIGHTED PROJECTS: 
+Provider Action Report                                                                    
+* Outlined a new data warehouse and ETL to meet business requirements
+* Designed MSSQL database and powershell system to manage fifteen algorithms 
+* Automated external reporting system to provide an actionable list of high target providers and patients to reach out to 
+* Developed algorithms to detect fraud across 100,000 healthcare providers and 40 million patients
+Opioid Report
+* Automated the ETL and algorithms that melded data from 5 different databases 
+* Engineered an algorithm to match patients and transactions across pharmaceutical and dental data with 98% accuracy
+* Compared 2 algorithm methodologies to find the best fitting fit for targeting outliers   
+Data Science & Engineering Consultant | Acheron Analytics | Seattle, WA | Jan 2017 - Present                                                  
+* Created and led  8 hour courses in R, Python and SQL focused on ARIMA forecasting, and data analytics to analysts, data scientists, and directors
+* Engineered automated systems for marketing and healthcare ROI decision products using MSSQL and Python
+* Conducted 2 executive workshops to discuss implementing data science techniques into upper level strategy
+Business Intelligence Developer | Providence Health and Services |Seattle, WA | July 2015 - Oct 2016
+* Managed 500 GB data warehouse for the Information Systems department which included financial, project tracking, talent acquisition, and HR data
+* Reduced Information System budget by 20% by developing C# application connected to SQL server database
+* Coded a report delivery UI that allows end-user modification to provide report timing using C# and JQuery 
+* Designed MVC financial reporting website using C# and MSSQL for managers and directors
+* Predicted future resource requirement in order to reduce contractor spend and increase quality of service through data science techniques such as multivariate regression 
+MIS Analysis Grader |University of Washington | Seattle, WA | Jan 2016 – Mar 2016
+* Analyzed 80+ students MySQL relational databases and Excel projects for proficient use of SQL, normalization practices, and statistical formulas
+* Coached students on writing data drive and actionable executive summaries by critiquing data usage
+Lead Instructor | Coding With Kids | Seattle, WA | Aug 2014 – Aug 2015
+* Instructed computer science theory to over 100 students
+________________
+
+
+EDUCATION
+University of Washington,  2015                                     
+B.A. Management Information Systems                   GPA: 3.7
