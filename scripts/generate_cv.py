@@ -7,21 +7,30 @@ def load_cv_data(json_path):
 
 def clean_text(text):
     """Nettoie le texte pour LaTeX"""
+    # Traitement spécial pour "Top X%"
+    if "%" in text and "Top" in text:
+        text = text.replace("%", "\\%")
+        return text
+    
+    # Remplacer les tirets en début de ligne par des points
+    if text.strip().startswith('-'):
+        text = '•' + text.strip()[1:]
+    
     # Remplacer les caractères spéciaux par leur version LaTeX
     replacements = {
-        '&': ' et ',  # Remplacer & par "et"
+        '&': ' et ',
         '%': '\\%',
         '$': '\\$',
-        '#': '\\#',  # Changer le traitement de #
+        '#': '\\#',
         '_': '\\textunderscore{}',
         '{': '\\{',
         '}': '\\}',
         '~': '\\textasciitilde{}',
         '^': '\\textasciicircum{}',
         '\\': '\\textbackslash{}',
-        "'": "'",  # Remplacer les apostrophes
-        '"': "''",  # Remplacer les guillemets
-        '–': '--',  # Remplacer les tirets
+        "'": "'",
+        '"': "''",
+        '–': '--',
         '—': '---',
         '…': '...',
     }
@@ -113,14 +122,19 @@ def generate_education(education):
     education_str.append("\\resumeSubHeadingListStart")
     
     for edu in education:
+        # Ajouter l'en-tête
         education_str.append("    \\resumeSubheading")
         education_str.append(f"      {{{edu['school']}}}{{{edu['date']}}}")
         education_str.append(f"      {{{edu['degree']}}}{{{edu['location']}}}")
         
+        # Ajouter les highlights
         if edu.get('highlights'):
             education_str.append("      \\resumeItemListStart")
             for highlight in edu['highlights']:
-                education_str.append(f"        \\resumeItem{{{clean_text(highlight)}}}")
+                # Traiter chaque highlight séparément
+                cleaned_highlight = clean_text(highlight)
+                # S'assurer que le highlight est bien formaté
+                education_str.append(f"        \\resumeItem{{{cleaned_highlight}}}")
             education_str.append("      \\resumeItemListEnd")
     
     education_str.append("  \\resumeSubHeadingListEnd")

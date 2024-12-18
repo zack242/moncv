@@ -9,8 +9,8 @@ python scripts/generate_cv.py
 # Aller dans le dossier output
 cd output
 
-# Compiler le PDF
-pdflatex cv.tex
+# Compiler le PDF en mode non-interactif
+pdflatex -interaction=nonstopmode cv.tex
 
 # Nettoyer les fichiers temporaires
 rm -f *.aux *.log *.out
