@@ -1,96 +1,15 @@
 {
     "personal": {
         "name": "Zakaria TOZY",
+        "title": "Data Engineer",
         "phone": "0617407077",
         "email": "zakaria.tozy@icloud.com",
         "linkedin": "zakaria-tozy",
+        "github": "github.com/zack242",
         "contract": "CDI",
         "location": "Paris",
-        "summary": "Doublement diplômé en Systèmes d'Information et Data Science, jeune ingénieur passionné par la data et les défis complexes. J'aspire à mettre mes compétences techniques au service de projets ambitieux et à forte valeur ajoutée."
+        "summary": "Doublement diplômé en Systèmes d'Information et Data Science, passionné par la data et les défis complexes. Je souhaite mettre mes compétences dans le cadre d'un CDI au service de projets ambitieux à forte valeur ajoutée."
     },
-    "experience": [
-        {
-            "company": "AXA Investment Managers",
-            "position": "Data Engineer / Data Analyst Intern",
-            "location": "Paris",
-            "dates": "Août 2023 -- Jan 2024",
-            "highlights": [
-                "Conception et mise en place de 10+ pipelines ETL pour l'ingestion de données métiers",
-                "Optimisation des modèles de données, migration des pipelines de distribution garantissant le reporting financier granulaire de 844 milliards d'euros d'actifs en 2023",
-                "Participation à des tests de nouveaux clusters sur Databricks et création d'un Proof of Concept (PoC) pour l'anonymisation des données sensibles",
-                "Création de tableaux de bord pour le département des contrôleurs financiers, facilitant leurs accès aux données et les requêtes ad hoc",
-                "Calcul des indicateurs de performance KPIs pour la vision distribuée/manageriale, incluant les indicateurs ME, OV, CIS et FX"
-            ]
-        },
-        {
-            "company": "Kalima Blockchain et IoT",
-            "position": "Software Engineer Intern",
-            "location": "Paris",
-            "dates": "Avr 2022 -- Août 2022",
-            "highlights": [
-                "Développement d'un explorateur de blockchain en Java/LevelDB pour le traitement de transactions à haute fréquence",
-                "Implémentation de fonctionnalités d'administration pour la blockchain Kalima en Node.js",
-                "Conception et développement d'un système d'authentification multisignature pour les DApps"
-            ]
-        },
-        {
-            "company": "Le Crédit Lyonnais - LCL",
-            "position": "IT Intern",
-            "location": "Paris",
-            "dates": "Jan 2020 -- Fév 2020",
-            "highlights": [
-                "Étude de migration Office 2010 vers 2016 et analyse d'impact sur les processus métiers",
-                "Développement et exécution de procédures de tests sur un parc de 23 000 postes"
-            ]
-        }
-    ],
-    "projects": [
-        {
-            "name": "Bitcoin Analysis",
-            "technologies": "Python, SQL, Airflow, dbt, Snowflake",
-            "highlights": [
-                "Conception d'un pipeline de données automatisé pour l'analyse des transactions Bitcoin",
-                "Mise en place d'une architecture moderne avec Airflow, dbt et Snowflake"
-            ]
-        },
-        {
-            "name": "Twitter Real-time Analysis",
-            "technologies": "Kafka, NLP, KNN, Python",
-            "highlights": [
-                "Développement d'une solution temps réel d'analyse des sentiments sur Twitter"
-            ]
-        },
-        {
-            "name": "Energy Disaggregation @Capgemini",
-            "technologies": "Numpy, Pandas, Feature Engineering",
-            "highlights": [
-                "Modélisation de la composante thermosensible pour l'optimisation des prévisions énergétiques",
-                "Développement de techniques de feature engineering sur la data pour l'amélioration des prédictions"
-            ]
-        }
-    ],
-    "education": [
-        {
-            "school": "École Centrale d'Électronique (ECE Paris)",
-            "degree": "Ingénieur en Systèmes d'information et Big data analytics",
-            "location": "Paris",
-            "date": "Janv 2024",
-            "highlights": [
-                "Top 5% de la promotion",
-                "Spécialisation : Programmation, Bases de données,Electoninique, DevOps"
-            ]
-        },
-        {
-            "school": "Institut Polytechnique de Paris",
-            "degree": "Master 2 en Data Sciences",
-            "location": "Paris",
-            "date": "Janv 2024",
-            "highlights": [
-                "Mention Très bien",
-                "Spécialisation : Machine Learning, Big Data, Cloud Infrastructure, Deep Learning, NLP"
-            ]
-        }
-    ],
     "skills": {
         "programming": [
             "Python",
@@ -113,29 +32,92 @@
         ],
         "machine_learning": [
             "Scikit-Learn",
-            "Machine Learning",
             "NLP",
-            "Computer Vision"
+            "Computer Vision",
+            "Deep Learning"
         ],
         "devops": [
             "Docker",
             "CI/CD",
             "Git",
             "Scrum"
+        ],
+        "soft_skills": [
+            "Communication",
+            "Problem Solving",
+            "Teamwork",
+            "Agile Methodology"
         ]
     },
-    "languages": [
+    "education": [
         {
-            "name": "Français",
-            "level": "Langue maternelle"
+            "school": "École Centrale d'Électronique (ECE Paris)",
+            "degree": "Ingénieur en Systèmes d'information et Big data analytics",
+            "date": "Janv 2024",
+            "distinction": "Top 5% de la promotion",
+            "specialization": "Spécialisation : Programmation, Bases de données, Électronique, DevOps"
         },
         {
-            "name": "Anglais",
-            "level": "Courant (TOEIC : 875)"
+            "school": "Institut Polytechnique de Paris (Ecole polytechnique)",
+            "degree": "Master 2 en Data Sciences",
+            "date": "Janv 2024",
+            "distinction": "Mention Très bien",
+            "specialization": "Spécialisation : Machine Learning, Big Data, Cloud Infrastructure, Deep Learning, NLP"
+        }
+    ],
+    "experience": [
+        {
+            "company": "AXA Investment Managers - AXA IM",
+            "position": "Data Engineer/Data Analyst Intern",
+            "dates": "Août 2023 -- Jan 2024",
+            "highlights": [
+                "Conception et mise en place de 10+ pipelines ETL pour l'ingestion de données métiers",
+                "Optimisation des modèles de données, migration des pipelines de distribution pour le reporting financier de 844 milliards d'euros d'actifs en 2023",
+                "Tests de nouveaux clusters sur Databricks et création d'un PoC pour l'anonymisation des données sensibles",
+                "Création de tableaux de bord pour les contrôleurs financiers, facilitant l'accès aux données et les requêtes ad hoc",
+                "Calcul des indicateurs de performance KPIs pour la vision distribuée managériale (ME, OV, CIS, FX)"
+            ]
         },
         {
-            "name": "Arabe",
-            "level": "Langue maternelle"
+            "company": "Kalima Blockchain et IoT",
+            "position": "Software Engineer Intern",
+            "dates": "Avr 2022 -- Août 2022",
+            "highlights": [
+                "Développement d'un explorateur de blockchain en Java/LevelDB pour Kalima (+1000 transactions par seconde)",
+                "Implémentation de fonctionnalités d'administration pour la blockchain Kalima en Node.js",
+                "Conception et développement d'un système d'authentification multisignature pour les DApps"
+            ]
+        },
+        {
+            "company": "Le Crédit Lyonnais - LCL",
+            "position": "IT Intern",
+            "dates": "Janv 2020 -- Fév 2020",
+            "highlights": [
+                "Étude de migration Office 2010 vers 2016 et analyse d'impact sur les processus métiers",
+                "Développement et exécution de procédures de tests sur un parc de 23 000 postes"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Bitcoin Analysis - Data Pipeline",
+            "highlights": [
+                "Création d'un pipeline de données avec Python, SQL, Airflow, dbt et Snowflake pour l'analyse des transactions Bitcoin",
+                "Optimisation du traitement des données en temps réel avec un processus d'ingestion en continu (streaming)"
+            ]
+        },
+        {
+            "name": "Twitter Real-time Analysis",
+            "highlights": [
+                "Développement d'un système de visualisation en temps réel des flux Twitter par topics à l'aide de Kafka et de l'algorithme KNN"
+            ]
+        },
+        {
+            "name": "Energy Disaggregation @ Capgemini",
+            "highlights": [
+                "Extraction de la composante thermosensible de la consommation énergétique pour prévoir la demande future en France",
+                "Utilisation de Numpy et Pandas pour prétraiter et analyser les données"
+            ]
         }
     ]
 }

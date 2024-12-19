@@ -7,73 +7,37 @@ def load_cv_data(json_path):
 
 def clean_text(text):
     """Nettoie le texte pour LaTeX"""
-    # Traitement spécial pour "Top X%"
-    if "%" in text and "Top" in text:
-        text = text.replace("%", "\\%")
+    if isinstance(text, (list, dict)):
         return text
     
-    # Remplacer d'abord les apostrophes par un espace
-    text = text.replace("'", " ")
-    text = text.replace("'", " ")
+    # Traitement spécial pour "Top X%"
+    if "%" in str(text) and "Top" in str(text):
+        return text.replace("%", "\\%")
     
-    # Remplacer les caractères spéciaux par leur version LaTeX
+    text = str(text)
+    text = text.replace("'", "'")
+    
     replacements = {
-        '&': ' et ',
+        '&': '\\&',
         '%': '\\%',
         '$': '\\$',
         '#': '\\#',
-        '_': '\\textunderscore{}',
+        '_': '\\_',
         '{': '\\{',
         '}': '\\}',
         '~': '\\textasciitilde{}',
         '^': '\\textasciicircum{}',
         '\\': '\\textbackslash{}',
+        '@': '\\@',
+        '<': '\\textless{}',
+        '>': '\\textgreater{}',
+        '|': '\\textbar{}',
+        '`': '\\`{}',
         '"': "''",
-        '–': '--',
-        '—': '---',
-        '…': '...',
-        '/': ' ',
-        '(': '',
-        ')': '',
-        '@': 'at'
+        '--': '---'
     }
-    
-    # Traitement spécial pour "C#"
-    text = text.replace('C#', 'C\\#')
     
     for old, new in replacements.items():
-        if old != '#':  # Skip le # car on l'a déjà traité pour C#
-            text = text.replace(old, new)
-    
-    # Nettoyer les caractères accentués
-    accents = {
-        'é': '\\\'{e}',
-        'è': '\\`{e}',
-        'à': '\\`{a}',
-        'ù': '\\`{u}',
-        'ê': '\\^{e}',
-        'â': '\\^{a}',
-        'î': '\\^{i}',
-        'ô': '\\^{o}',
-        'û': '\\^{u}',
-        'ë': '\\"{e}',
-        'ï': '\\"{i}',
-        'ü': '\\"{u}',
-        'ç': '\\c{c}',
-        'É': '\\\'{E}',
-        'È': '\\`{E}',
-        'À': '\\`{A}',
-        'Ê': '\\^{E}',
-        'Î': '\\^{I}',
-        'Ô': '\\^{O}',
-        'Û': '\\^{U}',
-        'Ë': '\\"{E}',
-        'Ï': '\\"{I}',
-        'Ü': '\\"{U}',
-        'Ç': '\\c{C}'
-    }
-    
-    for old, new in accents.items():
         text = text.replace(old, new)
     
     return text
@@ -81,180 +45,181 @@ def clean_text(text):
 def generate_header(personal):
     header = []
     header.append("\\begin{center}")
-    header.append(f"    \\textbf{{\\LARGE {personal['name']}}} \\\\ \\vspace{{0pt}}")
-    header.append(f"    \\large Data Engineer \\\\ \\vspace{{0pt}}")
-    header.append(f"    \\tiny \\faPhone\\ \\texttt{{{personal['phone']}}} \\hspace{{1pt}} $|$")
+    header.append(f"    \\textbf{{\\Huge {personal['name']}}} \\\\ \\vspace{{3pt}}")
+    header.append(f"    \\Large {personal['title']} \\\\ \\vspace{{5pt}}")
+    header.append(f"    \\small \\faPhone\\ \\texttt{{{personal['phone']}}} \\hspace{{1pt}} $|$")
     header.append(f"    \\hspace{{1pt}} \\faEnvelope\\ \\texttt{{{personal['email']}}} \\hspace{{1pt}} $|$")
     header.append(f"    \\hspace{{1pt}} \\faLinkedin\\ \\texttt{{{personal['linkedin']}}} \\hspace{{1pt}} $|$")
     header.append(f"    \\hspace{{1pt}} \\texttt{{{personal['contract']}}} \\hspace{{1pt}} $|$")
-    header.append(f"    \\hspace{{1pt}} \\faMapMarker\\ \\texttt{{{personal['location']}}}")
-    header.append("    \\\\ \\vspace{1pt}")
+    header.append(f"    \\hspace{{1pt}} \\faMapMarker\\ \\texttt{{{personal['location']}}} \\hspace{{1pt}} $|$")
+    header.append(f"    \\hspace{{1pt}} \\faGithub\\ \\texttt{{{personal['github']}}} \\\\ \\vspace{{10pt}}")
     header.append("\\end{center}")
     return "\n".join(header)
 
-def generate_profile(personal):
-    profile_str = []
-    profile_str.append("\\begin{itemize}[leftmargin=0in, label={}, itemsep=-3pt]")
-    profile_str.append("\\footnotesize{\\item{")
-    profile_str.append(clean_text(personal['summary']))
-    profile_str.append("}}")
-    profile_str.append("\\end{itemize}")
-    return "\n".join(profile_str)
-
-def generate_section_title(title):
-    return f"\\section*{{\\vspace{{-10pt}}{title}\\vspace{{-4pt}}}}"
-
-def generate_experience(experience):
-    experience_str = []
-    experience_str.append(generate_section_title("EXPERIENCE"))
-    experience_str.append("\\resumeSubHeadingListStart")
-    
-    for exp in experience:
-        # Nettoyer les données
-        company = clean_text(exp['company'])
-        position = clean_text(exp['position'])
-        location = clean_text(exp['location'])
-        dates = clean_text(exp['dates'])
-        
-        # Construire l'entrée avec le titre en italique et gris
-        experience_str.append("    \\resumeSubheading")
-        experience_str.append(f"      {{{company} \\hfill {{\\textcolor[gray]{{0.5}}{{\\textit{{{position}}}}}}}}{{{dates}}}")
-        experience_str.append(f"      {{{location}}}{{}}") # La ligne de location seule
-        experience_str.append("      \\resumeItemListStart")
-        
-        for highlight in exp['highlights']:
-            highlight = clean_text(highlight)
-            experience_str.append(f"        \\resumeItem{{{highlight}}}")
-        
-        experience_str.append("      \\resumeItemListEnd")
-    
-    experience_str.append("  \\resumeSubHeadingListEnd")
-    return "\n".join(experience_str)
-
-def generate_projects(projects):
-    projects_str = []
-    projects_str.append(generate_section_title("PROJECTS"))
-    projects_str.append("\\resumeSubHeadingListStart")
-    
-    for project in projects:
-        projects_str.append("      \\resumeProjectHeading")
-        projects_str.append(f"          {{\\textbf{{{project['name']}}} \\small{{({project['technologies']})}}}} {{}}")
-        projects_str.append("          \\resumeItemListStart")
-        
-        for highlight in project['highlights']:
-            projects_str.append(f"            \\resumeItem{{{highlight}}}")
-        
-        projects_str.append("          \\resumeItemListEnd")
-    
-    projects_str.append("    \\resumeSubHeadingListEnd")
-    return "\n".join(projects_str)
-
-def generate_education(education):
-    education_str = []
-    education_str.append(generate_section_title("EDUCATION"))
-    education_str.append("\\resumeSubHeadingListStart")
-    
-    for edu in education:
-        # Ajouter l'en-tête
-        education_str.append("    \\resumeSubheading")
-        education_str.append(f"      {{{edu['school']}}}{{{edu['date']}}}")
-        education_str.append(f"      {{{edu['degree']}}}{{{edu['location']}}}")
-        
-        # Ajouter les highlights
-        if edu.get('highlights'):
-            education_str.append("      \\resumeItemListStart")
-            for highlight in edu['highlights']:
-                # Traiter chaque highlight séparément
-                cleaned_highlight = clean_text(highlight)
-                # S'assurer que le highlight est bien formaté
-                education_str.append(f"        \\resumeItem{{{cleaned_highlight}}}")
-            education_str.append("      \\resumeItemListEnd")
-    
-    education_str.append("  \\resumeSubHeadingListEnd")
-    return "\n".join(education_str)
+def generate_summary(personal):
+    return f"""\\begin{{itemize}}[leftmargin=0in, label={{}}]
+\\small{{\\item{{
+{clean_text(personal['summary'])}
+}}}}
+\\end{{itemize}}"""
 
 def generate_skills(skills):
     skills_str = []
-    skills_str.append(generate_section_title("COMPETENCES"))
-    skills_str.append("\\begin{itemize}[leftmargin=0in, label={}, itemsep=-4pt]")
-    skills_str.append("\\scriptsize{\\item{")
+    skills_str.append("\\begin{itemize}[leftmargin=0in, label={}]")
+    skills_str.append("\\small{\\item{")
     
+    # Liste pour stocker toutes les lignes de compétences
     skill_lines = []
+    
     for category, items in skills.items():
         category_name = category.replace('_', ' ').title()
         # Nettoyer chaque compétence individuellement
-        cleaned_items = [clean_text(item) for item in items]
-        skill_line = f"     \\textbf{{{category_name}}} {{: {', '.join(cleaned_items)}}}"
+        cleaned_items = []
+        for item in items:
+            if item == "C#":
+                cleaned_items.append("C{\\#}")  # Échapper le # correctement
+            else:
+                cleaned_items.append(clean_text(item))
+        
+        # Créer la ligne de compétence
+        skill_line = f"\\textbf{{{category_name}}}: {', '.join(cleaned_items)}"
         skill_lines.append(skill_line)
     
-    skills_str.append("\\vspace{0pt} \\\\\n".join(skill_lines))
-    skills_str.append("}}")
+    # Joindre toutes les lignes avec \\ et \vspace
+    skills_content = " \\\\\n\\vspace{1pt}\n".join(skill_lines)
+    
+    # Ajouter le contenu à skills_str
+    skills_str.append(skills_content)
+    
+    # Fermer les accolades correctement
+    skills_str.append("}")  # Ferme \item{
+    skills_str.append("}")  # Ferme \small{
     skills_str.append("\\end{itemize}")
+    
     return "\n".join(skills_str)
 
-def generate_cv(template_path, output_path, cv_data):
-    # Créer le dossier output s'il n'existe pas
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+def generate_education(education):
+    edu_str = []
+    edu_str.append("\\resumeSubHeadingListStart")
     
-    # Read the template
+    for edu in education:
+        # Nettoyer toutes les données avant de les utiliser
+        school = clean_text(edu['school'])
+        degree = clean_text(edu['degree'])
+        date = clean_text(edu['date'])
+        distinction = clean_text(edu['distinction'])
+        specialization = clean_text(edu['specialization'])
+        
+        # Construire la structure correctement
+        edu_str.append("    \\resumeSubheading")
+        edu_str.append(f"      {{{school}}}")
+        edu_str.append(f"      {{{date}}}")
+        edu_str.append(f"      {{{degree}}}")
+        edu_str.append(f"      {{{distinction}}}")
+        
+        # Ajouter la spécialisation comme un item séparé
+        edu_str.append("      \\resumeItemListStart")
+        edu_str.append(f"        \\resumeItem{{{specialization}}}")
+        edu_str.append("      \\resumeItemListEnd")
+    
+    edu_str.append("  \\resumeSubHeadingListEnd")
+    return "\n".join(edu_str)
+
+def generate_experience(experience):
+    exp_str = []
+    exp_str.append("\\resumeSubHeadingListStart")
+    
+    for exp in experience:
+        exp_str.append("    \\resumeSubheading")
+        exp_str.append(f"      {{{clean_text(exp['company'])}}}{{{clean_text(exp['dates'])}}}")
+        exp_str.append(f"      {{{clean_text(exp['position'])}}}{{{clean_text('Paris')}}}") # Ajout de la ville
+        exp_str.append("      \\resumeItemListStart")
+        
+        for highlight in exp['highlights']:
+            exp_str.append(f"        \\resumeItem{{{clean_text(highlight)}}}")
+        
+        exp_str.append("      \\resumeItemListEnd")
+    
+    exp_str.append("  \\resumeSubHeadingListEnd")
+    return "\n".join(exp_str)
+
+def generate_projects(projects):
+    proj_str = []
+    proj_str.append("\\resumeSubHeadingListStart")
+    
+    for project in projects:
+        proj_str.append("    \\resumeProjectHeading")
+        proj_str.append(f"      {{\\textbf{{{project['name']}}}}} {{}}")
+        proj_str.append("      \\resumeItemListStart")
+        
+        for highlight in project['highlights']:
+            proj_str.append(f"        \\resumeItem{{{clean_text(highlight)}}}")
+        
+        proj_str.append("      \\resumeItemListEnd")
+    
+    proj_str.append("\\resumeSubHeadingListEnd")
+    return "\n".join(proj_str)
+
+def generate_cv(template_path, output_path, cv_data):
     with open(template_path, 'r', encoding='utf-8') as file:
         template = file.read()
 
-    # Ajouter les commandes de style au début du document
-    style_commands = """
-\\addtolength{\\topmargin}{-70in}
-
-\\titleformat{\\section}{
-    \\bfseries \\vspace{-10pt} \\raggedright \\large
-}{}{0em}{}[\\color{{light-grey}} {{\\titlerule[2pt]}} \\vspace{{-4pt}}]\n"
-"""
-    
-    # Generate each section
+    # Générer chaque section
     header = generate_header(cv_data['personal'])
+    summary = generate_summary(cv_data['personal'])
     skills = generate_skills(cv_data['skills'])
-    profile = generate_profile(cv_data['personal'])
+    education = generate_education(cv_data['education'])
     experience = generate_experience(cv_data['experience'])
     projects = generate_projects(cv_data['projects'])
-    education = generate_education(cv_data['education'])
 
-    # Find the marker for where to insert the content
-    content_start = template.find("\\begin{document}") + len("\\begin{document}")
-    content_end = template.find("\\end{document}")
+    # Remplacer le marqueur de contenu
+    content = f"""
+{header}
 
-    # Combine all parts avec des espacements très réduits
-    final_cv = (
-        template[:content_start] +
-        "\\vspace*{-50pt}" +  # Augmenté la réduction initiale
-        header +
-        "\\vspace{-15pt}" +  # Augmenté la réduction après le header
-        skills +
-        "\\vspace{-15pt}" +  # Augmenté la réduction après les skills
-        profile +
-        "\\vspace{-15pt}" +  # Augmenté la réduction après le profile
-        experience +
-        "\\vspace{-15pt}" +  # Augmenté la réduction après l'experience
-        projects +
-        "\\vspace{-15pt}" +  # Augmenté la réduction après les projects
-        education +
-        template[content_end:]
-    )
+{summary}
 
-    # Write the output
+\\section{{COMPETENCES}}
+{skills}
+
+\\section{{EDUCATION}}
+{education}
+
+\\section{{EXPERIENCE}}
+{experience}
+
+\\section{{PROJETS}}
+{projects}
+"""
+
+    # Insérer le contenu dans le template
+    final_cv = template.replace("%==== CONTENU GÉNÉRÉ ICI ====", content)
+
+    # Créer le dossier output s'il n'existe pas
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+    # Écrire le fichier final
     with open(output_path, 'w', encoding='utf-8') as file:
         file.write(final_cv)
 
 def main():
-    # Define paths
     current_dir = os.path.dirname(os.path.abspath(__file__))
     json_path = os.path.join(current_dir, '..', 'data', 'cv_data.json')
     template_path = os.path.join(current_dir, '..', 'templates', 'cv_template.tex')
     output_path = os.path.join(current_dir, '..', 'output', 'cv.tex')
 
-    # Load CV data
+    print(f"Génération du CV...")
+    print(f"Lecture des données depuis : {json_path}")
+    print(f"Utilisation du template : {template_path}")
+    print(f"Génération du fichier : {output_path}")
+
+    if not os.path.exists(json_path):
+        raise FileNotFoundError(f"Fichier de données non trouvé : {json_path}")
+    if not os.path.exists(template_path):
+        raise FileNotFoundError(f"Template non trouvé : {template_path}")
+
     cv_data = load_cv_data(json_path)
-    
-    # Generate CV
     generate_cv(template_path, output_path, cv_data)
+    print(f"CV généré avec succès dans : {output_path}")
 
 if __name__ == "__main__":
     main()

@@ -1,8 +1,6 @@
 %-------------------------
 % Resume in Latex
-% Author : Harshibar
-% Based off of: https://github.com/jakeryang/resume
-% License : MIT
+% Author : Zakaria TOZY
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -19,6 +17,7 @@
 \usepackage[english,french]{babel}
 \usepackage{tabularx}
 \usepackage[utf8]{inputenc}
+\usepackage[left=0.4in, right=0.4in, top=0.3in, bottom=0.2in]{geometry}
 
 \usepackage{fontawesome}
 \usepackage[scale=0.90,lf]{FiraMono}
@@ -49,20 +48,14 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{0in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-0.7in}
-\addtolength{\textheight}{1.0in}
-
 \urlstyle{same}
 
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-\titleformat {\section}{
-    \bfseries \vspace{2pt} \raggedright \large
+\titleformat{\section}{
+    \bfseries \vspace{-10pt} \raggedright \large
 }{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
 
 \newcommand{\resumeItem}[1]{
@@ -74,16 +67,9 @@
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\
-      \textit{#3} & {\color{dark-grey} \small #4}\\
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
     \end{tabular*}\vspace{-4pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
@@ -104,6 +90,7 @@
 
 \begin{document}
 
+
 \begin{center}
     \textbf{\Huge Zakaria TOZY} \\ \vspace{3pt}
     \Large Data Engineer \\ \vspace{5pt}
@@ -111,93 +98,103 @@
     \hspace{1pt} \faEnvelope\ \texttt{zakaria.tozy@icloud.com} \hspace{1pt} $|$
     \hspace{1pt} \faLinkedin\ \texttt{zakaria-tozy} \hspace{1pt} $|$
     \hspace{1pt} \texttt{CDI} \hspace{1pt} $|$
-    \hspace{1pt} \faMapMarker\ \texttt{Paris}
-    \\ \vspace{10pt}
+    \hspace{1pt} \faMapMarker\ \texttt{Paris} \hspace{1pt} $|$
+    \hspace{1pt} \faGithub\ \texttt{github.com/zack242} \\ \vspace{10pt}
 \end{center}
 
 \begin{itemize}[leftmargin=0in, label={}]
 \small{\item{
-Doublement dipl\^{o}m\'{e} en Syst\`{e}mes d Information et Data Science, jeune ing\'{e}nieur passionn\'{e} par la data et les d\'{e}fis complexes. J aspire \`{a} mettre mes comp\'{e}tences techniques au service de projets ambitieux et \`{a} forte valeur ajout\'{e}e.
+Doublement diplômé en Systèmes d'Information et Data Science, passionné par la data et les défis complexes. Je souhaite mettre mes compétences dans le cadre d'un CDI au service de projets ambitieux à forte valeur ajoutée.
 }}
 \end{itemize}
 
 \section{COMPETENCES}
 \begin{itemize}[leftmargin=0in, label={}]
 \small{\item{
-     \textbf{Programming} {: Python, SQL, Java, C++, C\textbackslash{}#}\vspace{2pt} \\
-     \textbf{Data Engineering} {: PySpark, BigQuery, ETL, Data Pipelines}\vspace{2pt} \\
-     \textbf{Cloud Databases} {: Databricks, Snowflake, GCP, dbt}\vspace{2pt} \\
-     \textbf{Machine Learning} {: Scikit-Learn, Machine Learning, NLP, Computer Vision}\vspace{2pt} \\
-     \textbf{Devops} {: Docker, CI CD, Git, Scrum}
-}}
+\textbf{Programming}: Python, SQL, Java, C++, C{\#} \\
+\vspace{1pt}
+\textbf{Data Engineering}: PySpark, BigQuery, ETL, Data Pipelines \\
+\vspace{1pt}
+\textbf{Cloud Databases}: Databricks, Snowflake, GCP, dbt \\
+\vspace{1pt}
+\textbf{Machine Learning}: Scikit-Learn, NLP, Computer Vision, Deep Learning \\
+\vspace{1pt}
+\textbf{Devops}: Docker, CI/CD, Git, Scrum \\
+\vspace{1pt}
+\textbf{Soft Skills}: Communication, Problem Solving, Teamwork, Agile Methodology
+}
+}
 \end{itemize}
-
-\section{EXPERIENCE}
-\resumeSubHeadingListStart
-    \resumeSubheading
-      {AXA Investment Managers}{Ao\^{u}t 2023 -- Jan 2024}
-      {Data Engineer   Data Analyst Intern}{Paris}
-      \resumeItemListStart
-        \resumeItem{Conception et mise en place de 10+ pipelines ETL pour l ingestion de donn\'{e}es m\'{e}tiers}
-        \resumeItem{Optimisation des mod\`{e}les de donn\'{e}es, migration des pipelines de distribution garantissant le reporting financier granulaire de 844 milliards d euros d actifs en 2023}
-        \resumeItem{Participation \`{a} des tests de nouveaux clusters sur Databricks et cr\'{e}ation d un Proof of Concept PoC pour l anonymisation des donn\'{e}es sensibles}
-        \resumeItem{Cr\'{e}ation de tableaux de bord pour le d\'{e}partement des contr\^{o}leurs financiers, facilitant leurs acc\`{e}s aux donn\'{e}es et les requ\^{e}tes ad hoc}
-        \resumeItem{Calcul des indicateurs de performance KPIs pour la vision distribu\'{e}e manageriale, incluant les indicateurs ME, OV, CIS et FX}
-      \resumeItemListEnd
-    \resumeSubheading
-      {Kalima Blockchain et IoT}{Avr 2022 -- Ao\^{u}t 2022}
-      {Software Engineer Intern}{Paris}
-      \resumeItemListStart
-        \resumeItem{D\'{e}veloppement d un explorateur de blockchain en Java LevelDB pour le traitement de transactions \`{a} haute fr\'{e}quence}
-        \resumeItem{Impl\'{e}mentation de fonctionnalit\'{e}s d administration pour la blockchain Kalima en Node.js}
-        \resumeItem{Conception et d\'{e}veloppement d un syst\`{e}me d authentification multisignature pour les DApps}
-      \resumeItemListEnd
-    \resumeSubheading
-      {Le Cr\'{e}dit Lyonnais - LCL}{Jan 2020 -- F\'{e}v 2020}
-      {IT Intern}{Paris}
-      \resumeItemListStart
-        \resumeItem{\'{E}tude de migration Office 2010 vers 2016 et analyse d impact sur les processus m\'{e}tiers}
-        \resumeItem{D\'{e}veloppement et ex\'{e}cution de proc\'{e}dures de tests sur un parc de 23 000 postes}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
-\section{PROJECTS}
-\resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Bitcoin Analysis} \small{(Python, SQL, Airflow, dbt, Snowflake)}} {}
-          \resumeItemListStart
-            \resumeItem{Conception d'un pipeline de données automatisé pour l'analyse des transactions Bitcoin}
-            \resumeItem{Mise en place d'une architecture moderne avec Airflow, dbt et Snowflake}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Twitter Real-time Analysis} \small{(Kafka, NLP, KNN, Python)}} {}
-          \resumeItemListStart
-            \resumeItem{Développement d'une solution temps réel d'analyse des sentiments sur Twitter}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Energy Disaggregation @Capgemini} \small{(Numpy, Pandas, Feature Engineering)}} {}
-          \resumeItemListStart
-            \resumeItem{Modélisation de la composante thermosensible pour l'optimisation des prévisions énergétiques}
-            \resumeItem{Développement de techniques de feature engineering sur la data pour l'amélioration des prédictions}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
 
 \section{EDUCATION}
 \resumeSubHeadingListStart
     \resumeSubheading
-      {École Centrale d'Électronique (ECE Paris)}{Janv 2024}
-      {Ingénieur en Systèmes d'information et Big data analytics}{Paris}
+      {École Centrale d'Électronique (ECE Paris)}
+      {Janv 2024}
+      {Ingénieur en Systèmes d'information et Big data analytics}
+      {Top 5\% de la promotion}
       \resumeItemListStart
-        \resumeItem{Top 5\% de la promotion}
-        \resumeItem{Sp\'{e}cialisation : Programmation, Bases de donn\'{e}es,Electoninique, DevOps}
+        \resumeItem{Spécialisation : Programmation, Bases de données, Électronique, DevOps}
       \resumeItemListEnd
     \resumeSubheading
-      {Institut Polytechnique de Paris}{Janv 2024}
-      {Master 2 en Data Sciences}{Paris}
+      {Institut Polytechnique de Paris (Ecole polytechnique)}
+      {Janv 2024}
+      {Master 2 en Data Sciences}
+      {Mention Très bien}
       \resumeItemListStart
-        \resumeItem{Mention Tr\`{e}s bien}
-        \resumeItem{Sp\'{e}cialisation : Machine Learning, Big Data, Cloud Infrastructure, Deep Learning, NLP}
+        \resumeItem{Spécialisation : Machine Learning, Big Data, Cloud Infrastructure, Deep Learning, NLP}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-\end{document}
+\section{EXPERIENCE}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {AXA Investment Managers - AXA IM}{Août 2023 --- Jan 2024}
+      {Data Engineer/Data Analyst Intern}{Paris}
+      \resumeItemListStart
+        \resumeItem{Conception et mise en place de 10+ pipelines ETL pour l'ingestion de données métiers}
+        \resumeItem{Optimisation des modèles de données, migration des pipelines de distribution pour le reporting financier de 844 milliards d'euros d'actifs en 2023}
+        \resumeItem{Tests de nouveaux clusters sur Databricks et création d'un PoC pour l'anonymisation des données sensibles}
+        \resumeItem{Création de tableaux de bord pour les contrôleurs financiers, facilitant l'accès aux données et les requêtes ad hoc}
+        \resumeItem{Calcul des indicateurs de performance KPIs pour la vision distribuée managériale (ME, OV, CIS, FX)}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Kalima Blockchain et IoT}{Avr 2022 --- Août 2022}
+      {Software Engineer Intern}{Paris}
+      \resumeItemListStart
+        \resumeItem{Développement d'un explorateur de blockchain en Java/LevelDB pour Kalima (+1000 transactions par seconde)}
+        \resumeItem{Implémentation de fonctionnalités d'administration pour la blockchain Kalima en Node.js}
+        \resumeItem{Conception et développement d'un système d'authentification multisignature pour les DApps}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Le Crédit Lyonnais - LCL}{Janv 2020 --- Fév 2020}
+      {IT Intern}{Paris}
+      \resumeItemListStart
+        \resumeItem{Étude de migration Office 2010 vers 2016 et analyse d'impact sur les processus métiers}
+        \resumeItem{Développement et exécution de procédures de tests sur un parc de 23 000 postes}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{PROJETS}
+\resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Bitcoin Analysis - Data Pipeline}} {}
+      \resumeItemListStart
+        \resumeItem{Création d'un pipeline de données avec Python, SQL, Airflow, dbt et Snowflake pour l'analyse des transactions Bitcoin}
+        \resumeItem{Optimisation du traitement des données en temps réel avec un processus d'ingestion en continu (streaming)}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Twitter Real-time Analysis}} {}
+      \resumeItemListStart
+        \resumeItem{Développement d'un système de visualisation en temps réel des flux Twitter par topics à l'aide de Kafka et de l'algorithme KNN}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Energy Disaggregation @ Capgemini}} {}
+      \resumeItemListStart
+        \resumeItem{Extraction de la composante thermosensible de la consommation énergétique pour prévoir la demande future en France}
+        \resumeItem{Utilisation de Numpy et Pandas pour prétraiter et analyser les données}
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+\end{document} 
