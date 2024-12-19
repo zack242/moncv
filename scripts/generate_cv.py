@@ -81,29 +81,32 @@ def clean_text(text):
 def generate_header(personal):
     header = []
     header.append("\\begin{center}")
-    header.append(f"    \\textbf{{\\Huge {personal['name']}}} \\\\ \\vspace{{3pt}}")
-    header.append(f"    \\Large Data Engineer \\\\ \\vspace{{5pt}}")
-    header.append(f"    \\small \\faPhone\\ \\texttt{{{personal['phone']}}} \\hspace{{1pt}} $|$")
+    header.append(f"    \\textbf{{\\LARGE {personal['name']}}} \\\\ \\vspace{{0pt}}")
+    header.append(f"    \\large Data Engineer \\\\ \\vspace{{0pt}}")
+    header.append(f"    \\tiny \\faPhone\\ \\texttt{{{personal['phone']}}} \\hspace{{1pt}} $|$")
     header.append(f"    \\hspace{{1pt}} \\faEnvelope\\ \\texttt{{{personal['email']}}} \\hspace{{1pt}} $|$")
     header.append(f"    \\hspace{{1pt}} \\faLinkedin\\ \\texttt{{{personal['linkedin']}}} \\hspace{{1pt}} $|$")
     header.append(f"    \\hspace{{1pt}} \\texttt{{{personal['contract']}}} \\hspace{{1pt}} $|$")
     header.append(f"    \\hspace{{1pt}} \\faMapMarker\\ \\texttt{{{personal['location']}}}")
-    header.append("    \\\\ \\vspace{10pt}")
+    header.append("    \\\\ \\vspace{1pt}")
     header.append("\\end{center}")
     return "\n".join(header)
 
 def generate_profile(personal):
     profile_str = []
-    profile_str.append("\\begin{itemize}[leftmargin=0in, label={}]")
-    profile_str.append("\\small{\\item{")
+    profile_str.append("\\begin{itemize}[leftmargin=0in, label={}, itemsep=-3pt]")
+    profile_str.append("\\footnotesize{\\item{")
     profile_str.append(clean_text(personal['summary']))
     profile_str.append("}}")
     profile_str.append("\\end{itemize}")
     return "\n".join(profile_str)
 
+def generate_section_title(title):
+    return f"\\section*{{\\vspace{{-10pt}}{title}\\vspace{{-4pt}}}}"
+
 def generate_experience(experience):
     experience_str = []
-    experience_str.append("\\section{EXPERIENCE}")
+    experience_str.append(generate_section_title("EXPERIENCE"))
     experience_str.append("\\resumeSubHeadingListStart")
     
     for exp in experience:
@@ -113,10 +116,10 @@ def generate_experience(experience):
         location = clean_text(exp['location'])
         dates = clean_text(exp['dates'])
         
-        # Construire l'entrée
+        # Construire l'entrée avec le titre en italique et gris
         experience_str.append("    \\resumeSubheading")
-        experience_str.append(f"      {{{company}}}{{{dates}}}")
-        experience_str.append(f"      {{{position}}}{{{location}}}")
+        experience_str.append(f"      {{{company} \\hfill {{\\textcolor[gray]{{0.5}}{{\\textit{{{position}}}}}}}}{{{dates}}}")
+        experience_str.append(f"      {{{location}}}{{}}") # La ligne de location seule
         experience_str.append("      \\resumeItemListStart")
         
         for highlight in exp['highlights']:
@@ -130,7 +133,7 @@ def generate_experience(experience):
 
 def generate_projects(projects):
     projects_str = []
-    projects_str.append("\\section{PROJECTS}")
+    projects_str.append(generate_section_title("PROJECTS"))
     projects_str.append("\\resumeSubHeadingListStart")
     
     for project in projects:
@@ -148,7 +151,7 @@ def generate_projects(projects):
 
 def generate_education(education):
     education_str = []
-    education_str.append("\\section{EDUCATION}")
+    education_str.append(generate_section_title("EDUCATION"))
     education_str.append("\\resumeSubHeadingListStart")
     
     for edu in education:
@@ -172,9 +175,9 @@ def generate_education(education):
 
 def generate_skills(skills):
     skills_str = []
-    skills_str.append("\\section{COMPETENCES}")
-    skills_str.append("\\begin{itemize}[leftmargin=0in, label={}]")
-    skills_str.append("\\small{\\item{")
+    skills_str.append(generate_section_title("COMPETENCES"))
+    skills_str.append("\\begin{itemize}[leftmargin=0in, label={}, itemsep=-4pt]")
+    skills_str.append("\\scriptsize{\\item{")
     
     skill_lines = []
     for category, items in skills.items():
@@ -184,7 +187,7 @@ def generate_skills(skills):
         skill_line = f"     \\textbf{{{category_name}}} {{: {', '.join(cleaned_items)}}}"
         skill_lines.append(skill_line)
     
-    skills_str.append("\\vspace{2pt} \\\\\n".join(skill_lines))
+    skills_str.append("\\vspace{0pt} \\\\\n".join(skill_lines))
     skills_str.append("}}")
     skills_str.append("\\end{itemize}")
     return "\n".join(skills_str)
@@ -197,10 +200,19 @@ def generate_cv(template_path, output_path, cv_data):
     with open(template_path, 'r', encoding='utf-8') as file:
         template = file.read()
 
+    # Ajouter les commandes de style au début du document
+    style_commands = """
+\\addtolength{\\topmargin}{-70in}
+
+\\titleformat{\\section}{
+    \\bfseries \\vspace{-10pt} \\raggedright \\large
+}{}{0em}{}[\\color{{light-grey}} {{\\titlerule[2pt]}} \\vspace{{-4pt}}]\n"
+"""
+    
     # Generate each section
     header = generate_header(cv_data['personal'])
-    profile = generate_profile(cv_data['personal'])
     skills = generate_skills(cv_data['skills'])
+    profile = generate_profile(cv_data['personal'])
     experience = generate_experience(cv_data['experience'])
     projects = generate_projects(cv_data['projects'])
     education = generate_education(cv_data['education'])
@@ -209,15 +221,21 @@ def generate_cv(template_path, output_path, cv_data):
     content_start = template.find("\\begin{document}") + len("\\begin{document}")
     content_end = template.find("\\end{document}")
 
-    # Combine all parts
+    # Combine all parts avec des espacements très réduits
     final_cv = (
-        template[:content_start] + "\n\n" +
-        header + "\n\n" +
-        profile + "\n\n" +
-        skills + "\n\n" +
-        experience + "\n\n" +
-        projects + "\n\n" +
-        education + "\n\n" +
+        template[:content_start] +
+        "\\vspace*{-50pt}" +  # Augmenté la réduction initiale
+        header +
+        "\\vspace{-15pt}" +  # Augmenté la réduction après le header
+        skills +
+        "\\vspace{-15pt}" +  # Augmenté la réduction après les skills
+        profile +
+        "\\vspace{-15pt}" +  # Augmenté la réduction après le profile
+        experience +
+        "\\vspace{-15pt}" +  # Augmenté la réduction après l'experience
+        projects +
+        "\\vspace{-15pt}" +  # Augmenté la réduction après les projects
+        education +
         template[content_end:]
     )
 
