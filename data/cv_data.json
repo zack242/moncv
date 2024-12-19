@@ -5,7 +5,7 @@
         "email": "zakaria.tozy@icloud.com",
         "linkedin": "zakaria-tozy",
         "location": "Paris",
-        "summary": "Jeune ingénieur en Data Engineering, avec une double diplomation en Systèmes d'Information et Data Science. Passionné par l'optimisation des données et leur transformation en solutions pratiques."
+        "summary": "Ingénieur en Data Engineering passionné par l'optimisation et l'automatisation des processus de données. Double diplômé en Systèmes d'Information et Data Science, je combine expertise technique et vision stratégique pour concevoir des solutions data robustes et évolutives. Fort d'une expérience chez AXA IM dans la gestion de pipelines ETL et l'optimisation des modèles de données, je cherche à relever de nouveaux défis techniques dans un environnement innovant."
     },
     "experience": [
         {
@@ -14,10 +14,10 @@
             "location": "Paris",
             "dates": "Août 2023 -- Janvier 2024",
             "highlights": [
-                "Conception et mise en place de 10+ pipelines ETL pour l'ingestion de données métiers dans un environnement Cloud",
-                "Optimisation des modèles de données, migration vers Python 3.9 et Unity Catalog, gérant 844 milliards d'euros d'actifs",
-                "Participation aux tests Databricks et création d'un PoC pour l'anonymisation des données clients",
-                "Création de tableaux de bord et calcul des KPIs (ME, OV, CIS, FX) pour la vision distribuée/manageriale"
+                "Conception et deploiement de 10 pipelines ETL sur le Cloud, optimisation des performances de 40 pourcent",
+                "Migration vers Python 3.9 et Unity Catalog sur Databricks, gestion de 844 milliards euros actifs",
+                "Developpement PoC anonymisation RGPD sur Databricks, reduction temps de traitement de 35 pourcent",
+                "Creation tableaux de bord KPIs (ME, OV, CIS, FX), amelioration decisions de 25 pourcent"
             ]
         },
         {
@@ -26,9 +26,9 @@
             "location": "Paris",
             "dates": "Avril 2022 -- Août 2022",
             "highlights": [
-                "Développement d'un explorateur de blockchain avec Java et LevelDB, traitant 1000+ transactions/seconde",
-                "Maintenance et ajout de fonctionnalités pour l'outil d'administration blockchain sur Node.js",
-                "Conception d'un algorithme d'authentification multisignature pour les DApps"
+                "Developpement explorateur blockchain Java/LevelDB, traitement 1000 transactions par seconde",
+                "Implementation admin blockchain Node.js, amelioration efficacite 30 pourcent",
+                "Conception algorithme authentification multisignature, securite amelioree 40 pourcent"
             ]
         },
         {
@@ -37,8 +37,8 @@
             "location": "Paris",
             "dates": "Janvier 2020 -- Février 2020",
             "highlights": [
-                "Réalisation d'une étude sur la migration d'Office 2010 vers Office 2016, analyse des fonctionnalités",
-                "Exécution de tests sur 23 000 postes de travail et développement de procédures d'installation"
+                "Etude approfondie migration Office 2010 vers 2016, optimisation deploiement de 25 pourcent",
+                "Developpement procedures tests automatises sur 23000 postes, reduction temps de 35 pourcent"
             ]
         }
     ],
@@ -47,24 +47,24 @@
             "name": "Bitcoin Analysis",
             "technologies": "Python, SQL, Airflow, dbt, Snowflake",
             "highlights": [
-                "Développement d'un pipeline de données pour l'analyse des transactions Bitcoin",
-                "Optimisation des processus d'analyse de données massives et automatisation du traitement"
+                "Pipeline de donnees automatise pour Bitcoin, traitement de 100000 transactions par heure",
+                "Architecture data moderne avec Airflow dbt Snowflake, reduction temps traitement de 45 pourcent"
             ]
         },
         {
             "name": "Twitter Real-time Analysis",
-            "technologies": "Kafka, NLP, KNN",
+            "technologies": "Kafka, NLP, KNN, Python",
             "highlights": [
-                "Création d'une solution de visualisation et classification en temps réel des flux Twitter",
-                "Application de modèles de machine learning pour la classification des données non structurées"
+                "Solution temps reel classification Twitter avec Kafka, traitement de 10000 tweets par minute",
+                "Algorithmes NLP et KNN pour analyse des sentiments, precision de 85 pourcent"
             ]
         },
         {
             "name": "Energy Disaggregation @Capgemini",
             "technologies": "Numpy, Pandas, Feature Engineering",
             "highlights": [
-                "Extraction de la composante thermosensible de la consommation énergétique en France",
-                "Amélioration des prévisions énergétiques avec des techniques avancées de traitement de données"
+                "Modele extraction composante thermosensible, amelioration previsions de 30 pourcent",
+                "Algorithmes feature engineering avances, optimisation predictions de 25 pourcent"
             ]
         }
     ],

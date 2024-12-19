@@ -12,9 +12,9 @@ def clean_text(text):
         text = text.replace("%", "\\%")
         return text
     
-    # Remplacer les tirets en début de ligne par des bullet points
-    if text.strip().startswith('-'):
-        text = '•' + text.strip()[1:]
+    # Remplacer d'abord les apostrophes par un espace
+    text = text.replace("'", " ")
+    text = text.replace("'", " ")
     
     # Remplacer les caractères spéciaux par leur version LaTeX
     replacements = {
@@ -28,11 +28,14 @@ def clean_text(text):
         '~': '\\textasciitilde{}',
         '^': '\\textasciicircum{}',
         '\\': '\\textbackslash{}',
-        "'": "'",
         '"': "''",
         '–': '--',
         '—': '---',
         '…': '...',
+        '/': ' ',
+        '(': '',
+        ')': '',
+        '@': 'at'
     }
     
     # Traitement spécial pour "C#"
@@ -43,19 +46,35 @@ def clean_text(text):
             text = text.replace(old, new)
     
     # Nettoyer les caractères accentués
-    text = text.replace('é', '\\\'e')
-    text = text.replace('è', '\\`e')
-    text = text.replace('à', '\\`a')
-    text = text.replace('ù', '\\`u')
-    text = text.replace('ê', '\\^e')
-    text = text.replace('â', '\\^a')
-    text = text.replace('î', '\\^i')
-    text = text.replace('ô', '\\^o')
-    text = text.replace('û', '\\^u')
-    text = text.replace('ë', '\\"e')
-    text = text.replace('ï', '\\"i')
-    text = text.replace('ü', '\\"u')
-    text = text.replace('ç', '\\c{c}')
+    accents = {
+        'é': '\\\'{e}',
+        'è': '\\`{e}',
+        'à': '\\`{a}',
+        'ù': '\\`{u}',
+        'ê': '\\^{e}',
+        'â': '\\^{a}',
+        'î': '\\^{i}',
+        'ô': '\\^{o}',
+        'û': '\\^{u}',
+        'ë': '\\"{e}',
+        'ï': '\\"{i}',
+        'ü': '\\"{u}',
+        'ç': '\\c{c}',
+        'É': '\\\'{E}',
+        'È': '\\`{E}',
+        'À': '\\`{A}',
+        'Ê': '\\^{E}',
+        'Î': '\\^{I}',
+        'Ô': '\\^{O}',
+        'Û': '\\^{U}',
+        'Ë': '\\"{E}',
+        'Ï': '\\"{I}',
+        'Ü': '\\"{U}',
+        'Ç': '\\c{C}'
+    }
+    
+    for old, new in accents.items():
+        text = text.replace(old, new)
     
     return text
 
@@ -70,6 +89,16 @@ def generate_header(personal):
     header.append("    \\\\ \\vspace{-3pt}")
     header.append("\\end{center}")
     return "\n".join(header)
+
+def generate_profile(personal):
+    profile_str = []
+    profile_str.append("\\section{PROFIL}")
+    profile_str.append("\\begin{itemize}[leftmargin=0in, label={}]")
+    profile_str.append("\\small{\\item{")
+    profile_str.append(clean_text(personal['summary']))
+    profile_str.append("}}")
+    profile_str.append("\\end{itemize}")
+    return "\n".join(profile_str)
 
 def generate_experience(experience):
     experience_str = []
@@ -169,6 +198,7 @@ def generate_cv(template_path, output_path, cv_data):
 
     # Generate each section
     header = generate_header(cv_data['personal'])
+    profile = generate_profile(cv_data['personal'])
     experience = generate_experience(cv_data['experience'])
     projects = generate_projects(cv_data['projects'])
     education = generate_education(cv_data['education'])
@@ -182,6 +212,7 @@ def generate_cv(template_path, output_path, cv_data):
     final_cv = (
         template[:content_start] + "\n\n" +
         header + "\n\n" +
+        profile + "\n\n" +
         experience + "\n\n" +
         projects + "\n\n" +
         education + "\n\n" +
