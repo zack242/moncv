@@ -81,18 +81,19 @@ def clean_text(text):
 def generate_header(personal):
     header = []
     header.append("\\begin{center}")
-    header.append(f"    \\textbf{{\\Huge {personal['name']}}} \\\\ \\vspace{{5pt}}")
+    header.append(f"    \\textbf{{\\Huge {personal['name']}}} \\\\ \\vspace{{3pt}}")
+    header.append(f"    \\Large Data Engineer \\\\ \\vspace{{5pt}}")
     header.append(f"    \\small \\faPhone\\ \\texttt{{{personal['phone']}}} \\hspace{{1pt}} $|$")
     header.append(f"    \\hspace{{1pt}} \\faEnvelope\\ \\texttt{{{personal['email']}}} \\hspace{{1pt}} $|$")
     header.append(f"    \\hspace{{1pt}} \\faLinkedin\\ \\texttt{{{personal['linkedin']}}} \\hspace{{1pt}} $|$")
+    header.append(f"    \\hspace{{1pt}} \\texttt{{{personal['contract']}}} \\hspace{{1pt}} $|$")
     header.append(f"    \\hspace{{1pt}} \\faMapMarker\\ \\texttt{{{personal['location']}}}")
-    header.append("    \\\\ \\vspace{-3pt}")
+    header.append("    \\\\ \\vspace{10pt}")
     header.append("\\end{center}")
     return "\n".join(header)
 
 def generate_profile(personal):
     profile_str = []
-    profile_str.append("\\section{PROFIL}")
     profile_str.append("\\begin{itemize}[leftmargin=0in, label={}]")
     profile_str.append("\\small{\\item{")
     profile_str.append(clean_text(personal['summary']))
@@ -171,7 +172,7 @@ def generate_education(education):
 
 def generate_skills(skills):
     skills_str = []
-    skills_str.append("\\section{SKILLS}")
+    skills_str.append("\\section{COMPETENCES}")
     skills_str.append("\\begin{itemize}[leftmargin=0in, label={}]")
     skills_str.append("\\small{\\item{")
     
@@ -199,10 +200,10 @@ def generate_cv(template_path, output_path, cv_data):
     # Generate each section
     header = generate_header(cv_data['personal'])
     profile = generate_profile(cv_data['personal'])
+    skills = generate_skills(cv_data['skills'])
     experience = generate_experience(cv_data['experience'])
     projects = generate_projects(cv_data['projects'])
     education = generate_education(cv_data['education'])
-    skills = generate_skills(cv_data['skills'])
 
     # Find the marker for where to insert the content
     content_start = template.find("\\begin{document}") + len("\\begin{document}")
@@ -213,10 +214,10 @@ def generate_cv(template_path, output_path, cv_data):
         template[:content_start] + "\n\n" +
         header + "\n\n" +
         profile + "\n\n" +
+        skills + "\n\n" +
         experience + "\n\n" +
         projects + "\n\n" +
         education + "\n\n" +
-        skills + "\n\n" +
         template[content_end:]
     )
 

@@ -4,8 +4,9 @@
         "phone": "0617407077",
         "email": "zakaria.tozy@icloud.com",
         "linkedin": "zakaria-tozy",
+        "contract": "CDI",
         "location": "Paris",
-        "summary": "Jeune ingénieur en Data Engineering, avec une double diplomation en Systèmes d'Information et Data Science. Passionné par l'optimisation des données et leur transformation en solutions pratiques, je maîtrise Python et SQL, et je cherche à mettre mes compétences au service de projets innovants."
+        "summary": "Doublement diplômé en Systèmes d'Information et Data Science, jeune ingénieur passionné par la data et les défis complexes. J'aspire à mettre mes compétences techniques au service de projets ambitieux et à forte valeur ajoutée."
     },
     "experience": [
         {
@@ -56,8 +57,7 @@
             "name": "Twitter Real-time Analysis",
             "technologies": "Kafka, NLP, KNN, Python",
             "highlights": [
-                "Développement d'une solution temps réel d'analyse de sentiments sur Twitter",
-                "Implémentation d'algorithmes NLP et KNN avec une précision de 85%"
+                "Développement d'une solution temps réel d'analyse des sentiments sur Twitter"
             ]
         },
         {
