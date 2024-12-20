@@ -8,7 +8,7 @@
         "github": "github.com/zack242",
         "contract": "CDI",
         "location": "Paris",
-        "summary": "Ingénieur en Systèmes d'Information et Data Science passionné par la data et les nouvelles technologies. Je recherche un poste en CDI pour contribuer à des projets innovants et à forte valeur ajoutée."
+        "summary": "Ingénieur en Systèmes d'Information et Data Science avec une double formation (ECE Paris/Polytechnique), passionné par la data et les nouvelles technologies. Je recherche un poste en CDI pour contribuer à des projets innovants et à forte valeur ajoutée."
     },
     "skills": {
         "programming": [
@@ -17,6 +17,11 @@
             "Java",
             "C++",
             "C#"
+        ],
+        "languages": [
+            "Français (Bilingue)",
+            "Arabe (Bilingue)",
+            "Anglais (Courant - TOEIC 875)"
         ],
         "data_engineering": [
             "PySpark",
@@ -44,7 +49,7 @@
         ],
         "soft_skills": [
             "Autonomie",
-            "Rigoureux",
+            "Rigueur",
             "Esprit d'analyse",
             "Apprentissage rapide"
         ]
