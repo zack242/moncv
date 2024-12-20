@@ -71,11 +71,11 @@
             "position": "Data Engineer/Data Analyst Intern",
             "dates": "Août 2023 -- Jan 2024",
             "highlights": [
-                "Conception et mise en place d'une dizaine de pipelines ETL pour l'ingestion de données métiers",
-                "Optimisation du model de donnée et migration des pipelines de distribution utiliser pour le reporting financier de 844 milliards d'euros d'actifs en 2023",
-                "Tests de nouveaux clusters sur Databricks et création d'un PoC pour l'anonymisation des données sensibles",
-                "Création de tableaux de bord pour les contrôleurs financiers, facilitant leurs accès aux données.",
-                "Calcul des indicateurs de performance KPIs pour la vision distribuée (ME, OV, CIS, FX)"
+                "Conception et mise en place d'une dizaine de pipelines ETL pour l'ingestion de données métiers.",
+                "Optimisation du modèle de données et migration des pipelines de distribution utilisés pour le reporting financier de 844 milliards d'euros d'actifs en 2023.",
+                "Tests de nouveaux clusters sur Databricks et création d'un PoC pour l'anonymisation des données sensibles.",
+                "Création de tableaux de bord pour les contrôleurs financiers, facilitant leur accès aux données.",
+                "Calcul des indicateurs de performance KPIs pour la vision distribuée (ME, OV, CIS, FX)."
             ]
         },
         {
@@ -83,9 +83,9 @@
             "position": "Software Engineer Intern",
             "dates": "Avr 2022 -- Août 2022",
             "highlights": [
-                "Développement d'un explorateur de blockchain en Java/LevelDB (+1000 transactions par seconde)",
-                "Implémentation de nouvelles fonctionnalités d'administration pour la blockchain Kalima en Node.js",
-                "Conception et développement d'un système d'authentification multisignature pour les DApps"
+                "Développement d'un explorateur de blockchain en Java/LevelDB (+1000 transactions par seconde).",
+                "Implémentation de nouvelles fonctionnalités d'administration pour la blockchain Kalima en Node.js.",
+                "Conception et développement d'un système d'authentification multisignature pour les DApps."
             ]
         },
         {
@@ -93,8 +93,8 @@
             "position": "IT Intern",
             "dates": "Janv 2020 -- Fév 2020",
             "highlights": [
-                "Étude de migration Office 2010 vers 2016 et analyse d'impact sur les processus métiers",
-                "Développement et exécution de procédures de tests sur un parc de 23 000 postes"
+                "Étude de migration Office 2010 vers 2016 et analyse d'impact sur les processus métiers.",
+                "Développement et exécution de procédures de tests sur un parc de 23 000 postes."
             ]
         }
     ],
@@ -102,19 +102,19 @@
         {
             "name": "Bitcoin Analysis - Data Pipeline",
             "highlights": [
-                "Création d'un pipeline de données avec Python, SQL, Airflow, dbt et Snowflake pour l'analyse des transactions Bitcoin, traitant plus de 1 million de transactions par jour"
+                "Création d'un pipeline de données avec Python, SQL, Airflow, dbt et Snowflake pour l'analyse des transactions Bitcoin, traitant plus de 1 million de transactions par jour."
             ]
         },
         {
             "name": "Twitter Real-time Analysis",
             "highlights": [
-                "Développement d'un système de visualisation en temps réel des flux Twitter par topics à l'aide de Kafka et de l'algorithme KNN"
+                "Développement d'un système de visualisation en temps réel des flux Twitter par topics à l'aide de Kafka et de l'algorithme KNN."
             ]
         },
         {
             "name": "Energy Disaggregation @ Capgemini",
             "highlights": [
-                "Extraction de la composante thermosensible de la consommation énergétique pour prévoir la demande future en France"
+                "Extraction de la composante thermosensible de la consommation énergétique pour prévoir la demande future en France."
             ]
         }
     ]
