@@ -8,7 +8,7 @@
         "github": "github.com/zack242",
         "contract": "CDI",
         "location": "Paris",
-        "summary": "Doublement diplômé en Systèmes d'Information et Data Science, passionné par la data et les défis complexes. Je souhaite mettre mes compétences dans le cadre d'un CDI au service de projets ambitieux à forte valeur ajoutée."
+        "summary": "Ingénieur en Systèmes d'Information et Data Science passionné par la data et les nouvelles technologies. Je recherche un poste en CDI pour contribuer à des projets innovants et à forte valeur ajoutée."
     },
     "skills": {
         "programming": [
@@ -43,10 +43,10 @@
             "Scrum"
         ],
         "soft_skills": [
-            "Communication",
-            "Problem Solving",
-            "Teamwork",
-            "Agile Methodology"
+            "Autonomie",
+            "Rigoureux",
+            "Esprit d'analyse",
+            "Apprentissage rapide"
         ]
     },
     "education": [
@@ -71,11 +71,11 @@
             "position": "Data Engineer/Data Analyst Intern",
             "dates": "Août 2023 -- Jan 2024",
             "highlights": [
-                "Conception et mise en place de 10+ pipelines ETL pour l'ingestion de données métiers",
-                "Optimisation des modèles de données, migration des pipelines de distribution pour le reporting financier de 844 milliards d'euros d'actifs en 2023",
+                "Conception et mise en place d'une dizaine de pipelines ETL pour l'ingestion de données métiers",
+                "Optimisation du model de donnée et migration des pipelines de distribution utiliser pour le reporting financier de 844 milliards d'euros d'actifs en 2023",
                 "Tests de nouveaux clusters sur Databricks et création d'un PoC pour l'anonymisation des données sensibles",
-                "Création de tableaux de bord pour les contrôleurs financiers, facilitant l'accès aux données et les requêtes ad hoc",
-                "Calcul des indicateurs de performance KPIs pour la vision distribuée managériale (ME, OV, CIS, FX)"
+                "Création de tableaux de bord pour les contrôleurs financiers, facilitant leurs accès aux données.",
+                "Calcul des indicateurs de performance KPIs pour la vision distribuée (ME, OV, CIS, FX)"
             ]
         },
         {
@@ -83,8 +83,8 @@
             "position": "Software Engineer Intern",
             "dates": "Avr 2022 -- Août 2022",
             "highlights": [
-                "Développement d'un explorateur de blockchain en Java/LevelDB pour Kalima (+1000 transactions par seconde)",
-                "Implémentation de fonctionnalités d'administration pour la blockchain Kalima en Node.js",
+                "Développement d'un explorateur de blockchain en Java/LevelDB (+1000 transactions par seconde)",
+                "Implémentation de nouvelles fonctionnalités d'administration pour la blockchain Kalima en Node.js",
                 "Conception et développement d'un système d'authentification multisignature pour les DApps"
             ]
         },
@@ -102,8 +102,7 @@
         {
             "name": "Bitcoin Analysis - Data Pipeline",
             "highlights": [
-                "Création d'un pipeline de données avec Python, SQL, Airflow, dbt et Snowflake pour l'analyse des transactions Bitcoin",
-                "Optimisation du traitement des données en temps réel avec un processus d'ingestion en continu (streaming)"
+                "Création d'un pipeline de données avec Python, SQL, Airflow, dbt et Snowflake pour l'analyse des transactions Bitcoin, traitant plus de 1 million de transactions par jour"
             ]
         },
         {
@@ -115,8 +114,7 @@
         {
             "name": "Energy Disaggregation @ Capgemini",
             "highlights": [
-                "Extraction de la composante thermosensible de la consommation énergétique pour prévoir la demande future en France",
-                "Utilisation de Numpy et Pandas pour prétraiter et analyser les données"
+                "Extraction de la composante thermosensible de la consommation énergétique pour prévoir la demande future en France"
             ]
         }
     ]
