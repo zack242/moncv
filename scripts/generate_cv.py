@@ -56,7 +56,7 @@ def generate_header(personal):
 
 def generate_summary(personal):
     return f"""\\begin{{itemize}}[leftmargin=0in, label={{}}]
-\\small{{\\item{{
+\\footnotesize{{\\item{{
 {clean_text(personal['summary'])}
 }}}}
 \\end{{itemize}}"""
@@ -64,7 +64,7 @@ def generate_summary(personal):
 def generate_skills(skills):
     skills_str = []
     skills_str.append("\\begin{itemize}[leftmargin=0in, label={}]")
-    skills_str.append("\\small{\\item{")
+    skills_str.append("\\footnotesize{\\item{")
     
     # Liste pour stocker toutes les lignes de compétences
     skill_lines = []
@@ -80,18 +80,18 @@ def generate_skills(skills):
                 cleaned_items.append(clean_text(item))
         
         # Créer la ligne de compétence
-        skill_line = f"\\textbf{{{category_name}}}: {', '.join(cleaned_items)}"
+        skill_line = f"{{\\small\\textbf{{{category_name}}}:}} {', '.join(cleaned_items)}"
         skill_lines.append(skill_line)
     
     # Joindre toutes les lignes avec \\ et \vspace
-    skills_content = " \\\\\n\\vspace{1pt}\n".join(skill_lines)
+    skills_content = " \\\\\n\\vspace{3pt}\n".join(skill_lines)
     
     # Ajouter le contenu à skills_str
     skills_str.append(skills_content)
     
     # Fermer les accolades correctement
     skills_str.append("}")  # Ferme \item{
-    skills_str.append("}")  # Ferme \small{
+    skills_str.append("}")  # Ferme \footnotesize{
     skills_str.append("\\end{itemize}")
     
     return "\n".join(skills_str)
