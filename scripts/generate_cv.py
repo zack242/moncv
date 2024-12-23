@@ -162,7 +162,7 @@ def generate_projects(projects):
     
     for project in projects:
         proj_str.append("    \\resumeProjectHeading")
-        proj_str.append(f"      {{\\textbf{{{project['name']}}}}} {{}}")
+        proj_str.append(f"      {{\\textbf{{{clean_text(project['name'])}}}}} {{}}")
         proj_str.append("      \\resumeItemListStart")
         
         for highlight in project['highlights']:

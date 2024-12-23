@@ -106,7 +106,7 @@
     ],
     "projects": [
         {
-            "name": "Bitcoin Analysis - Data Pipeline",
+            "name": "Bitcoin Analysis",
             "highlights": [
                 "Création d'un pipeline de données avec Python, SQL, Airflow, dbt et Snowflake pour l'analyse des transactions Bitcoin, traitant plus de 1 million de transactions par jour."
             ]
