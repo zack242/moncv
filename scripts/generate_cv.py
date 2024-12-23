@@ -45,8 +45,6 @@ def clean_text(text):
 def generate_header(personal):
     header = []
     header.append("\\begin{center}")
-    header.append(f"    \\textbf{{\\Huge {personal['name']}}} \\\\ \\vspace{{3pt}}")
-    header.append(f"    \\Large {personal['title']} \\\\ \\vspace{{5pt}}")
     header.append(f"    \\small \\faPhone\\ \\texttt{{{personal['phone']}}} \\hspace{{1pt}} $|$")
     header.append(f"    \\hspace{{1pt}} \\faEnvelope\\ \\texttt{{{personal['email']}}} \\hspace{{1pt}} $|$")
     header.append(f"    \\hspace{{1pt}} \\faLinkedin\\ \\texttt{{{personal['linkedin']}}} \\hspace{{1pt}} $|$")
@@ -163,6 +161,10 @@ def generate_projects(projects):
 def generate_cv(template_path, output_path, cv_data):
     with open(template_path, 'r', encoding='utf-8') as file:
         template = file.read()
+
+    # Remplacer les variables dans le template
+    template = template.replace("{{name}}", cv_data['personal']['name'])
+    template = template.replace("{{title}}", cv_data['personal']['title'])
 
     # Générer chaque section
     header = generate_header(cv_data['personal'])
