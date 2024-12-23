@@ -1,18 +1,28 @@
 #!/bin/bash
 
-# Créer le dossier output s'il n'existe pas
-mkdir -p output
-
 # Générer le fichier .tex
-python scripts/generate_cv.py
+python3 scripts/generate_cv.py
 
-# Aller dans le dossier output
+# Vérifier si le fichier .tex a été généré
+if [ ! -f output/cv.tex ]; then
+    echo "Erreur : Le fichier cv.tex n'a pas été généré"
+    exit 1
+fi
+
+# Copier les images dans le dossier output
+mkdir -p output/images
+cp images/* output/images/
+
+# Compiler le PDF
 cd output
+pdflatex cv.tex
+pdflatex cv.tex  # Deuxième passage pour les références
+cd ..
 
-# Compiler le PDF en mode non-interactif
-pdflatex -interaction=nonstopmode cv.tex
+# Vérifier si le PDF a été généré
+if [ ! -f output/cv.pdf ]; then
+    echo "Erreur : La compilation du PDF a échoué"
+    exit 1
+fi
 
-# Nettoyer les fichiers temporaires
-rm -f *.aux *.log *.out
-
-echo "CV généré avec succès dans output/cv.pdf" 
+echo "CV généré avec succès !" 

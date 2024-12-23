@@ -48,9 +48,8 @@ def generate_header(personal):
     header.append(f"    \\small \\faPhone\\ \\texttt{{{personal['phone']}}} \\hspace{{1pt}} $|$")
     header.append(f"    \\hspace{{1pt}} \\faEnvelope\\ \\texttt{{{personal['email']}}} \\hspace{{1pt}} $|$")
     header.append(f"    \\hspace{{1pt}} \\faLinkedin\\ \\texttt{{{personal['linkedin']}}} \\hspace{{1pt}} $|$")
-    header.append(f"    \\hspace{{1pt}} \\texttt{{{personal['contract']}}} \\hspace{{1pt}} $|$")
     header.append(f"    \\hspace{{1pt}} \\faMapMarker\\ \\texttt{{{personal['location']}}} \\hspace{{1pt}} $|$")
-    header.append(f"    \\hspace{{1pt}} \\faGithub\\ \\texttt{{{personal['github']}}} \\\\ \\vspace{{10pt}}")
+    header.append(f"    \\hspace{{1pt}} \\faGithub\\ \\texttt{{{personal['github']}}} \\\\ \\vspace{{0pt}}")
     header.append("\\end{center}")
     return "\n".join(header)
 
@@ -83,7 +82,7 @@ def generate_skills(skills):
             else:
                 cleaned_items.append(clean_text(item))
         
-        skill_line = f"{{\\small\\textbf{{{category_name}}}:}} {', '.join(cleaned_items)}"
+        skill_line = f"{{\\small\\textbf{{{category_name}}}:}} {{\\footnotesize {', '.join(cleaned_items)}}}"
         skill_lines.append(skill_line)
     
     # Ajouter la nouvelle catégorie regroupée
@@ -95,7 +94,7 @@ def generate_skills(skills):
     
     if data_items:
         data_items = [clean_text(item) for item in data_items]
-        skill_line = f"{{\\small\\textbf{{Data & Cloud Engineering}}:}} {', '.join(data_items)}"
+        skill_line = f"{{\\small\\textbf{{Data & Cloud Engineering}}:}} {{\\footnotesize {', '.join(data_items)}}}"
         skill_lines.append(skill_line)
     
     # Joindre toutes les lignes avec \\ et \vspace
@@ -180,7 +179,6 @@ def generate_cv(template_path, output_path, cv_data):
     # Remplacer les variables dans le template
     template = template.replace("{{name}}", cv_data['personal']['name'])
     template = template.replace("{{title}}", cv_data['personal']['title'])
-    template = template.replace("{{contract}}", cv_data['personal']['contract'])
 
     # Générer chaque section
     header = generate_header(cv_data['personal'])
@@ -199,10 +197,10 @@ def generate_cv(template_path, output_path, cv_data):
 \\section{{COMPETENCES}}
 {skills}
 
-\\section{{EDUCATION}}
+\\section{{FORMATIONS}}
 {education}
 
-\\section{{EXPERIENCE}}
+\\section{{EXPERIENCES}}
 {experience}
 
 \\section{{PROJETS}}
