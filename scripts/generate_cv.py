@@ -165,6 +165,7 @@ def generate_cv(template_path, output_path, cv_data):
     # Remplacer les variables dans le template
     template = template.replace("{{name}}", cv_data['personal']['name'])
     template = template.replace("{{title}}", cv_data['personal']['title'])
+    template = template.replace("{{contract}}", cv_data['personal']['contract'])
 
     # Générer chaque section
     header = generate_header(cv_data['personal'])
