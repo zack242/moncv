@@ -17,7 +17,7 @@
 \usepackage[english,french]{babel}
 \usepackage{tabularx}
 \usepackage[utf8]{inputenc}
-\usepackage[left=0.5in, right=0.5in, top=0.1in, bottom=0.1in]{geometry}
+\usepackage[left=0.5in, right=0.5in, top=0.1in, bottom=0.2in]{geometry}
 
 \usepackage{fontawesome}
 \usepackage[scale=0.90,lf]{FiraMono}
@@ -69,14 +69,14 @@
 \newcommand{\resumeSubheading}[4]{
   \vspace{2pt}\item
     \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      {\small\textbf{#1}} & {\footnotesize#2} \\
+      {\footnotesize\textbf{#1}} & {\footnotesize#2} \\
       {\footnotesize\textit{#3}} & {\footnotesize\textit{#4}} \\
     \end{tabular*}\vspace{2pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
   \item
-  {\small#1} \hfill {#2}
+  {\footnotesize#1} \hfill {#2}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -92,15 +92,17 @@
 
 \begin{document}
 
-\begin{left}
+\begin{flushleft}
   \begin{minipage}[c]{0.2\textwidth}
     \includegraphics[width=3cm]{images/profilpicture.png}
   \end{minipage}%
   \begin{minipage}[c]{0.8\textwidth}
-    {\huge \textbf{Zakaria TOZY}} \\ \vspace{8pt}
+    \hspace{10pt}
+    {\huge \textbf{Zakaria TOZY}} \\ \vspace{10pt}
+    \hspace{9pt}
     {\normalsize Data Engineer} \vspace{2pt}
   \end{minipage}
-\end{left}
+\end{flushleft}
 
 \vspace{-5pt}
 
@@ -121,17 +123,17 @@ Ingénieur en Systèmes d'Information et Data Science avec une double formation 
 \section{COMPETENCES}
 \begin{itemize}[leftmargin=0in, label={}]
 \footnotesize{\item{
-{\small\textbf{Programming}:} {\footnotesize Python, SQL, Java, C++, C{\#}} \\
+{\footnotesize\textbf{Programmation}:} {\footnotesize Python, SQL, Java, C++, C{\#}} \\
 \vspace{3pt}
-{\small\textbf{Languages}:} {\footnotesize Français (Bilingue), Arabe (Bilingue), Anglais (Courant - TOEIC 875)} \\
+{\footnotesize\textbf{Machine Learning}:} {\footnotesize Scikit-Learn, NLP, Computer Vision, Deep Learning} \\
 \vspace{3pt}
-{\small\textbf{Machine Learning}:} {\footnotesize Scikit-Learn, NLP, Computer Vision, Deep Learning} \\
+{\footnotesize\textbf{Devops}:} {\footnotesize Docker, CI/CD, Git, Scrum} \\
 \vspace{3pt}
-{\small\textbf{Devops}:} {\footnotesize Docker, CI/CD, Git, Scrum} \\
+{\footnotesize\textbf{Soft Skills}:} {\footnotesize Autonomie, Rigueur, Esprit d'analyse, Apprentissage rapide} \\
 \vspace{3pt}
-{\small\textbf{Soft Skills}:} {\footnotesize Autonomie, Rigueur, Esprit d'analyse, Apprentissage rapide} \\
+{\footnotesize\textbf{Langues}:} {\footnotesize Français (Bilingue), Arabe (Bilingue), Anglais (Courant - TOEIC 875)} \\
 \vspace{3pt}
-{\small\textbf{Data & Cloud Engineering}:} {\footnotesize PySpark, BigQuery, ETL, Data Pipelines, Databricks, Snowflake, GCP, dbt}
+{\footnotesize\textbf{Data \& Cloud Engineering}:} {\footnotesize PySpark, BigQuery, ETL, Data Pipelines, Databricks, Snowflake, GCP, dbt}
 }
 }
 \end{itemize}
@@ -159,7 +161,7 @@ Ingénieur en Systèmes d'Information et Data Science avec une double formation 
 \section{EXPERIENCES}
 \resumeSubHeadingListStart
     \resumeSubheading
-      {AXA Investment Managers - AXA IM}{Août 2023 --- Jan 2024}
+      {AXA Investment Managers - AXA IM}{Août 2023 --- Janv 2024}
       {Data Engineer/Data Analyst Intern}{Paris}
       \resumeItemListStart
         \resumeItem{Conception et mise en place d'une dizaine de pipelines de données pour l'ingestion de données métiers.}
@@ -167,7 +169,7 @@ Ingénieur en Systèmes d'Information et Data Science avec une double formation 
         \resumeItem{Tests de nouveaux clusters sur Databricks et création d'un PoC (Proof of Concept) pour l'anonymisation des données sensibles.}
         \resumeItem{Création de tableaux de bord pour les contrôleurs financiers.}
         \resumeItem{Calcul des indicateurs de performance KPIs pour la vision distribuée (ME, OV, CIS, FX).}
-        \resumeItem{Travail sur la qualité et la validation des données d'un ensemble de reporting.}
+        \resumeItem{Travail sur la qualité et la validation des données pour le reporting.}
       \resumeItemListEnd
     \resumeSubheading
       {Kalima Blockchain et IoT}{Avr 2022 --- Août 2022}
@@ -199,7 +201,7 @@ Ingénieur en Systèmes d'Information et Data Science avec une double formation 
         \resumeItem{Développement d'un système de visualisation en temps réel des flux Twitter par topics à l'aide de Kafka et de l'algorithme KNN (K-Nearest Neighbors).}
       \resumeItemListEnd
     \resumeProjectHeading
-      {\textbf{Energy Disaggregation \@ Capgemini}} {}
+      {\textbf{Energy Disaggregation \@Capgemini}} {}
       \resumeItemListStart
         \resumeItem{Extraction de la composante thermosensible de la consommation énergétique pour prévoir la demande future en France.}
       \resumeItemListEnd

@@ -17,7 +17,7 @@
 \usepackage[english,french]{babel}
 \usepackage{tabularx}
 \usepackage[utf8]{inputenc}
-\usepackage[left=0.5in, right=0.5in, top=0.1in, bottom=0.1in]{geometry}
+\usepackage[left=0.5in, right=0.5in, top=0.1in, bottom=0.2in]{geometry}
 
 \usepackage{fontawesome}
 \usepackage[scale=0.90,lf]{FiraMono}
@@ -69,14 +69,14 @@
 \newcommand{\resumeSubheading}[4]{
   \vspace{2pt}\item
     \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      {\small\textbf{#1}} & {\footnotesize#2} \\
+      {\footnotesize\textbf{#1}} & {\footnotesize#2} \\
       {\footnotesize\textit{#3}} & {\footnotesize\textit{#4}} \\
     \end{tabular*}\vspace{2pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
   \item
-  {\small#1} \hfill {#2}
+  {\footnotesize#1} \hfill {#2}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -92,15 +92,17 @@
 
 \begin{document}
 
-\begin{left}
+\begin{flushleft}
   \begin{minipage}[c]{0.2\textwidth}
     \includegraphics[width=3cm]{images/profilpicture.png}
   \end{minipage}%
   \begin{minipage}[c]{0.8\textwidth}
-    {\huge \textbf{{{name}}}} \\ \vspace{8pt}
+    \hspace{10pt}
+    {\huge \textbf{{{name}}}} \\ \vspace{10pt}
+    \hspace{9pt}
     {\normalsize {{title}}} \vspace{2pt}
   \end{minipage}
-\end{left}
+\end{flushleft}
 
 \vspace{-5pt}
 %==== CONTENU GÉNÉRÉ ICI ====

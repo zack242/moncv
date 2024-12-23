@@ -70,6 +70,10 @@ def generate_skills(skills):
     
     for category, items in skills.items():
         category_name = category.replace('_', ' ').title()
+        # Traduction spéciale pour "programmation"
+        if category_name == "Programmation":
+            category_name = "Programmation"
+        
         # Regrouper Data Engineering et Cloud Databases
         if category_name in ["Data Engineering", "Cloud Databases"]:
             continue
@@ -82,7 +86,7 @@ def generate_skills(skills):
             else:
                 cleaned_items.append(clean_text(item))
         
-        skill_line = f"{{\\small\\textbf{{{category_name}}}:}} {{\\footnotesize {', '.join(cleaned_items)}}}"
+        skill_line = f"{{\\footnotesize\\textbf{{{category_name}}}:}} {{\\footnotesize {', '.join(cleaned_items)}}}"
         skill_lines.append(skill_line)
     
     # Ajouter la nouvelle catégorie regroupée
@@ -94,7 +98,7 @@ def generate_skills(skills):
     
     if data_items:
         data_items = [clean_text(item) for item in data_items]
-        skill_line = f"{{\\small\\textbf{{Data & Cloud Engineering}}:}} {{\\footnotesize {', '.join(data_items)}}}"
+        skill_line = f"{{\\footnotesize\\textbf{{Data \\& Cloud Engineering}}:}} {{\\footnotesize {', '.join(data_items)}}}"
         skill_lines.append(skill_line)
     
     # Joindre toutes les lignes avec \\ et \vspace

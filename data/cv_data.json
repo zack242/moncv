@@ -11,17 +11,12 @@
         "summary": "Ingénieur en Systèmes d'Information et Data Science avec une double formation (ECE Paris/Polytechnique), passionné par les données et les nouvelles technologies. Je recherche un poste en CDI pour contribuer à des projets innovants et à forte valeur ajoutée."
     },
     "skills": {
-        "programming": [
+        "programmation": [
             "Python",
             "SQL",
             "Java",
             "C++",
             "C#"
-        ],
-        "languages": [
-            "Français (Bilingue)",
-            "Arabe (Bilingue)",
-            "Anglais (Courant - TOEIC 875)"
         ],
         "data_engineering": [
             "PySpark",
@@ -52,6 +47,11 @@
             "Rigueur",
             "Esprit d'analyse",
             "Apprentissage rapide"
+        ],
+        "langues": [
+            "Français (Bilingue)",
+            "Arabe (Bilingue)",
+            "Anglais (Courant - TOEIC 875)"
         ]
     },
     "education": [
@@ -74,14 +74,14 @@
         {
             "company": "AXA Investment Managers - AXA IM",
             "position": "Data Engineer/Data Analyst Intern",
-            "dates": "Août 2023 -- Jan 2024",
+            "dates": "Août 2023 -- Janv 2024",
             "highlights": [
                 "Conception et mise en place d'une dizaine de pipelines de données pour l'ingestion de données métiers.",
                 "Optimisation du modèle de données et migration des pipelines de distribution utilisés pour le reporting financier de 844 milliards d'euros d'actifs en 2023.",
                 "Tests de nouveaux clusters sur Databricks et création d'un PoC (Proof of Concept) pour l'anonymisation des données sensibles.",
                 "Création de tableaux de bord pour les contrôleurs financiers.",
                 "Calcul des indicateurs de performance KPIs pour la vision distribuée (ME, OV, CIS, FX).",
-                "Travail sur la qualité et la validation des données d'un ensemble de reporting."
+                "Travail sur la qualité et la validation des données pour le reporting."
             ]
         },
         {
@@ -118,7 +118,7 @@
             ]
         },
         {
-            "name": "Energy Disaggregation @ Capgemini",
+            "name": "Energy Disaggregation @Capgemini",
             "highlights": [
                 "Extraction de la composante thermosensible de la consommation énergétique pour prévoir la demande future en France."
             ]
