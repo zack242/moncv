@@ -71,16 +71,31 @@ def generate_skills(skills):
     
     for category, items in skills.items():
         category_name = category.replace('_', ' ').title()
+        # Regrouper Data Engineering et Cloud Databases
+        if category_name in ["Data Engineering", "Cloud Databases"]:
+            continue
+        
         # Nettoyer chaque compétence individuellement
         cleaned_items = []
         for item in items:
             if item == "C#":
-                cleaned_items.append("C{\\#}")  # Échapper le # correctement
+                cleaned_items.append("C{\\#}")
             else:
                 cleaned_items.append(clean_text(item))
         
-        # Créer la ligne de compétence
         skill_line = f"{{\\small\\textbf{{{category_name}}}:}} {', '.join(cleaned_items)}"
+        skill_lines.append(skill_line)
+    
+    # Ajouter la nouvelle catégorie regroupée
+    data_items = []
+    if 'data_engineering' in skills:
+        data_items.extend(skills['data_engineering'])
+    if 'cloud_databases' in skills:
+        data_items.extend(skills['cloud_databases'])
+    
+    if data_items:
+        data_items = [clean_text(item) for item in data_items]
+        skill_line = f"{{\\small\\textbf{{Data & Cloud Engineering}}:}} {', '.join(data_items)}"
         skill_lines.append(skill_line)
     
     # Joindre toutes les lignes avec \\ et \vspace
