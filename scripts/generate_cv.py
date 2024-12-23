@@ -1,5 +1,6 @@
 import json
 import os
+import sys
 
 def load_cv_data(json_path):
     with open(json_path, 'r', encoding='utf-8') as file:
@@ -222,12 +223,30 @@ def generate_cv(template_path, output_path, cv_data):
         file.write(final_cv)
 
 def main():
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    json_path = os.path.join(current_dir, '..', 'data', 'cv_data.json')
-    template_path = os.path.join(current_dir, '..', 'templates', 'cv_template.tex')
-    output_path = os.path.join(current_dir, '..', 'output', 'cv.tex')
+    # Récupérer l'argument de ligne de commande pour le type de CV
+    if len(sys.argv) > 1:
+        cv_type = sys.argv[1]
+    else:
+        cv_type = "engineer"  # valeur par défaut
 
-    print(f"Génération du CV...")
+    # Mapping des types de CV vers les noms de fichiers
+    cv_types = {
+        "engineer": "cv_data_enginner.json",
+        "analyst": "cv_data_analyst.json",
+        "software": "cv_data_software.json"
+    }
+
+    # Vérifier si le type de CV est valide
+    if cv_type not in cv_types:
+        print(f"Type de CV invalide. Options disponibles : {', '.join(cv_types.keys())}")
+        sys.exit(1)
+
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    json_path = os.path.join(current_dir, '..', 'data', cv_types[cv_type])
+    template_path = os.path.join(current_dir, '..', 'templates', 'cv_template.tex')
+    output_path = os.path.join(current_dir, '..', 'output', f'cv_{cv_type}.tex')
+
+    print(f"Génération du CV de type {cv_type}...")
     print(f"Lecture des données depuis : {json_path}")
     print(f"Utilisation du template : {template_path}")
     print(f"Génération du fichier : {output_path}")

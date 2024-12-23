@@ -1,0 +1,126 @@
+{
+    "personal": {
+        "name": "Zakaria TOZY",
+        "title": "Data Analyst / Data Engineer",
+        "contract": "CDI",
+        "phone": "0617407077",
+        "email": "zakaria.tozy@icloud.com",
+        "linkedin": "zakaria-tozy",
+        "github": "github.com/zack242",
+        "location": "Paris",
+        "summary": "Ingénieur en Systèmes d'Information et Data Science avec une double formation (ECE Paris/Polytechnique), combinant expertise en ingénierie des données et en analyse. Je recherche un poste en CDI pour mettre à profit mes compétences techniques et analytiques au service de projets à forte valeur ajoutée."
+    },
+    "skills": {
+        "programmation": [
+            "Python",
+            "SQL",
+            "Java",
+            "C++",
+            "C#"
+        ],
+        "data_engineering": [
+            "Pandas",
+            "NumPy",
+            "ETL",
+            "Data Pipelines"
+        ],
+        "cloud_databases": [
+            "BigQuery",
+            "Snowflake",
+            "GCP",
+            "dbt"
+        ],
+        "machine_learning": [
+            "Scikit-Learn",
+            "NLP",
+            "LLM"
+        ],
+        "devops": [
+            "Docker",
+            "CI/CD",
+            "Git",
+            "Scrum"
+        ],
+        "soft_skills": [
+            "Communication",
+            "Esprit d'analyse",
+            "Storytelling",
+            "Business Acumen"
+        ],
+        "langues": [
+            "Français (Bilingue)",
+            "Arabe (Bilingue)",
+            "Anglais (Courant - TOEIC 875)"
+        ]
+    },
+    "education": [
+        {
+            "school": "École Centrale d'Électronique (ECE Paris)",
+            "degree": "Ingénieur en Systèmes d'Information et Big Data Analytics",
+            "date": "Janv 2024",
+            "distinction": "Top 5% de la promotion",
+            "specialization": "Spécialisation : Programmation, Bases de données, Électronique, DevOps"
+        },
+        {
+            "school": "Institut Polytechnique de Paris (École polytechnique)",
+            "degree": "Master 2 en Data Sciences",
+            "date": "Janv 2024",
+            "distinction": "Mention Très bien",
+            "specialization": "Spécialisation : Machine Learning, Big Data, Cloud Infrastructure, Deep Learning, NLP"
+        }
+    ],
+    "experience": [
+        {
+            "company": "AXA Investment Managers - AXA IM",
+            "position": "Data Engineer/Data Analyst Intern",
+            "dates": "Août 2023 -- Janv 2024",
+            "highlights": [
+                "Création et optimisation de tableaux de bord interactifs pour les contrôleurs financiers.",
+                "Conception et mise en place de pipelines de données pour l'ingestion de données métiers.",
+                "Analyse approfondie et reporting des KPIs de performance pour le suivi de 844 milliards d'euros d'actifs.",
+                "Tests de nouveaux clusters sur Databricks et création d'un PoC (Proof of Concept) pour l'anonymisation des données sensibles.",
+                "Calcul des indicateurs de performance KPIs pour la vision distribuée (ME, OV, CIS, FX).",
+                "Travail sur la qualité et la validation des données pour le reporting."
+            ]
+        },
+        {
+            "company": "Kalima Blockchain et IoT",
+            "position": "Software Engineer Intern",
+            "dates": "Avr 2022 -- Août 2022",
+            "highlights": [
+                "Développement d'un explorateur de blockchain en Java/LevelDB (+1000 transactions par seconde).",
+                "Implémentation de nouvelles fonctionnalités d'administration pour la blockchain Kalima en Node.js.",
+                "Conception et développement d'un système d'authentification multisignature pour les DApps (Decentralized Applications)."
+            ]
+        },
+        {
+            "company": "Le Crédit Lyonnais - LCL",
+            "position": "IT Intern",
+            "dates": "Janv 2020 -- Fév 2020",
+            "highlights": [
+                "Analyse d'impact de la migration Microsoft Office 2010 vers 2016 sur les processus métiers.",
+                "Création de rapports détaillés sur les tests effectués sur 23 000 postes de travail."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Bitcoin Analysis",
+            "highlights": [
+                "Création d'un pipeline de données avec Python, SQL, Airflow, dbt et Snowflake pour l'analyse des transactions Bitcoin, traitant plus de 1 million de transactions par jour."
+            ]
+        },
+        {
+            "name": "Twitter Real-time Analysis",
+            "highlights": [
+                "Développement d'un système de visualisation en temps réel des flux Twitter par topics à l'aide de Kafka et de l'algorithme KNN."
+            ]
+        },
+        {
+            "name": "Energy Disaggregation @Capgemini",
+            "highlights": [
+                "Extraction de la composante thermosensible de la consommation énergétique pour prévoir la demande future en France."
+            ]
+        }
+    ]
+}
