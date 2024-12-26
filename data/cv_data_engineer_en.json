@@ -1,0 +1,127 @@
+{
+    "personal": {
+        "name": "Zakaria TOZY",
+        "title": "Data Engineer",
+        "contract": "Full-time",
+        "phone": "0617407077",
+        "email": "zakaria.tozy@icloud.com",
+        "linkedin": "zakaria-tozy",
+        "github": "github.com/zack242",
+        "location": "Paris",
+        "summary": "Information Systems and Data Science Engineer with a dual degree (ECE Paris/Polytechnique), passionate about data and new technologies. I am seeking a full-time position to contribute to innovative and high-impact projects."
+    },
+    "skills": {
+        "programming": [
+            "Python",
+            "SQL",
+            "Java",
+            "C++",
+            "C#"
+        ],
+        "data_engineering": [
+            "PySpark",
+            "BigQuery",
+            "ETL",
+            "Data Pipelines"
+        ],
+        "cloud_databases": [
+            "Databricks",
+            "Snowflake",
+            "GCP",
+            "dbt"
+        ],
+        "machine_learning": [
+            "Scikit-Learn",
+            "NLP",
+            "Computer Vision",
+            "Deep Learning"
+        ],
+        "devops": [
+            "Docker",
+            "CI/CD",
+            "Git",
+            "Scrum"
+        ],
+        "soft_skills": [
+            "Autonomy",
+            "Rigor",
+            "Analytical Thinking",
+            "Fast Learner"
+        ],
+        "languages": [
+            "French (Native)",
+            "Arabic (Native)",
+            "English (Fluent - TOEIC 875)"
+        ]
+    },
+    "education": [
+        {
+            "school": "École Centrale d'Électronique (ECE Paris)",
+            "degree": "Engineering Degree in Information Systems and Big Data Analytics",
+            "date": "Jan 2024",
+            "distinction": "Top 5% of class",
+            "specialization": "Specialization: Programming, Databases, Electronics, DevOps"
+        },
+        {
+            "school": "Institut Polytechnique de Paris (École polytechnique)",
+            "degree": "Master's Degree in Data Science",
+            "date": "Jan 2024",
+            "distinction": "With Highest Honors",
+            "specialization": "Specialization: Machine Learning, Big Data, Cloud Infrastructure, Deep Learning, NLP"
+        }
+    ],
+    "experience": [
+        {
+            "company": "AXA Investment Managers - AXA IM",
+            "position": "Data Engineer/Data Analyst Intern",
+            "dates": "Aug 2023 -- Jan 2024",
+            "highlights": [
+                "Designed and implemented multiple data pipelines for business data ingestion.",
+                "Optimized data model and migrated distribution pipelines used for financial reporting of €844 billion in assets in 2023.",
+                "Tested new Databricks clusters and created a PoC (Proof of Concept) for sensitive data anonymization.",
+                "Created interactive dashboards for financial controllers.",
+                "Calculated KPI performance indicators for distributed vision (ME, OV, CIS, FX).",
+                "Worked on data quality and validation for reporting."
+            ]
+        },
+        {
+            "company": "Kalima Blockchain and IoT",
+            "position": "Software Engineer Intern",
+            "dates": "Apr 2022 -- Aug 2022",
+            "highlights": [
+                "Developed a blockchain explorer in Java/LevelDB (+1000 transactions per second).",
+                "Implemented new administration features for Kalima blockchain using Node.js.",
+                "Designed and developed a multi-signature authentication system for DApps (Decentralized Applications)."
+            ]
+        },
+        {
+            "company": "Le Crédit Lyonnais - LCL",
+            "position": "IT Intern",
+            "dates": "Jan 2020 -- Feb 2020",
+            "highlights": [
+                "Studied Microsoft Office migration from 2010 to 2016 and analyzed its impact on business processes.",
+                "Developed and executed test procedures on 23,000 workstations."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Bitcoin Analysis",
+            "highlights": [
+                "Created a data pipeline using Python, SQL, Airflow, dbt, and Snowflake for Bitcoin transaction analysis, processing over 1 million transactions per day."
+            ]
+        },
+        {
+            "name": "Twitter Real-time Analysis",
+            "highlights": [
+                "Developed a real-time visualization system for Twitter streams by topics using Kafka and KNN (K-Nearest Neighbors) algorithm."
+            ]
+        },
+        {
+            "name": "Energy Disaggregation @Capgemini",
+            "highlights": [
+                "Extracted the temperature-sensitive component of energy consumption to forecast future demand in France."
+            ]
+        }
+    ]
+}

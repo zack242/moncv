@@ -181,6 +181,17 @@ def generate_cv(template_path, output_path, cv_data):
     with open(template_path, 'r', encoding='utf-8') as file:
         template = file.read()
 
+    # Déterminer la langue du CV basée sur le nom du fichier
+    is_english = output_path.endswith('_en.tex')
+    
+    # Définir les titres des sections selon la langue
+    section_titles = {
+        'skills': 'SKILLS' if is_english else 'COMPETENCES',
+        'education': 'EDUCATION' if is_english else 'FORMATIONS',
+        'experience': 'EXPERIENCE' if is_english else 'EXPERIENCES',
+        'projects': 'PROJECTS' if is_english else 'PROJETS'
+    }
+
     # Remplacer les variables dans le template
     template = template.replace("{{name}}", cv_data['personal']['name'])
     template = template.replace("{{title}}", cv_data['personal']['title'])
@@ -193,22 +204,22 @@ def generate_cv(template_path, output_path, cv_data):
     experience = generate_experience(cv_data['experience'])
     projects = generate_projects(cv_data['projects'])
 
-    # Remplacer le marqueur de contenu
+    # Remplacer le marqueur de contenu avec les sections et leurs titres traduits
     content = f"""
 {header}
 
 {summary}
 
-\\section{{COMPETENCES}}
+\\section{{{section_titles['skills']}}}
 {skills}
 
-\\section{{FORMATIONS}}
+\\section{{{section_titles['education']}}}
 {education}
 
-\\section{{EXPERIENCES}}
+\\section{{{section_titles['experience']}}}
 {experience}
 
-\\section{{PROJETS}}
+\\section{{{section_titles['projects']}}}
 {projects}
 """
 
@@ -229,20 +240,28 @@ def main():
     else:
         cv_type = "engineer"  # valeur par défaut
 
+    # Détecter si c'est une version anglaise
+    is_english = cv_type.endswith('_en')
+    base_type = cv_type.replace('_en', '')
+
     # Mapping des types de CV vers les noms de fichiers
     cv_types = {
-        "engineer": "cv_data_enginner.json",
-        "analyst": "cv_data_analyst.json",
-        "software": "cv_data_software.json"
+        "engineer": "cv_data_engineer{}.json",
+        "analyst": "cv_data_analyst{}.json",
+        "software": "cv_data_software{}.json"
     }
 
-    # Vérifier si le type de CV est valide
-    if cv_type not in cv_types:
+    # Vérifier si le type de base de CV est valide
+    if base_type not in cv_types:
         print(f"Type de CV invalide. Options disponibles : {', '.join(cv_types.keys())}")
         sys.exit(1)
 
+    # Ajouter le suffixe _en si nécessaire
+    suffix = "_en" if is_english else ""
+    json_filename = cv_types[base_type].format(suffix)
+
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    json_path = os.path.join(current_dir, '..', 'data', cv_types[cv_type])
+    json_path = os.path.join(current_dir, '..', 'data', json_filename)
     template_path = os.path.join(current_dir, '..', 'templates', 'cv_template.tex')
     output_path = os.path.join(current_dir, '..', 'output', f'cv_{cv_type}.tex')
 

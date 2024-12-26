@@ -37,12 +37,26 @@ compile_cv() {
     echo "CV $cv_type généré avec succès"
 }
 
+# Vérifier si le type de CV est valide
+check_cv_type() {
+    local cv_type=$1
+    # Enlever le suffixe _en si présent
+    local base_type=${cv_type%_en}
+    
+    for valid_type in "${CV_TYPES[@]}"; do
+        if [ "$base_type" = "$valid_type" ]; then
+            return 0
+        fi
+    done
+    return 1
+}
+
 # Si un argument est fourni, compiler uniquement ce type de CV
 if [ $# -eq 1 ]; then
-    if [[ " ${CV_TYPES[@]} " =~ " $1 " ]]; then
+    if check_cv_type "$1"; then
         compile_cv "$1"
     else
-        echo "Type de CV invalide. Options disponibles : ${CV_TYPES[*]}"
+        echo "Type de CV invalide. Options disponibles : ${CV_TYPES[*]} (ajoutez _en pour la version anglaise)"
         exit 1
     fi
 else
