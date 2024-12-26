@@ -8,27 +8,27 @@
         "linkedin": "zakaria-tozy",
         "github": "github.com/zack242",
         "location": "Paris",
-        "summary": "Information Systems and Data Science Engineer with a dual degree (ECE Paris/Polytechnique), passionate about data and new technologies. I am seeking a full-time position to contribute to innovative and high-impact projects."
+        "summary": "Computer Science and Data Science Engineer with a dual degree (ECE Paris/Polytechnique), combining strong technical expertise in data engineering with experience in financial data processing at AXA IM. Passionate about building robust data platforms and implementing AI solutions, I am seeking to contribute to innovative and transformative projects."
     },
     "skills": {
         "programming": [
             "Python",
             "SQL",
+            "C#",
             "Java",
-            "C++",
-            "C#"
+            "C++"
         ],
         "data_engineering": [
             "PySpark",
-            "BigQuery",
             "ETL",
-            "Data Pipelines"
+            "Data Pipelines",
+            "dbt"
         ],
         "cloud_databases": [
             "Databricks",
             "Snowflake",
             "GCP",
-            "dbt"
+            "NoSQL"
         ],
         "machine_learning": [
             "Scikit-Learn",
@@ -43,10 +43,10 @@
             "Scrum"
         ],
         "soft_skills": [
-            "Autonomy",
-            "Rigor",
-            "Analytical Thinking",
-            "Fast Learner"
+            "Problem Solving",
+            "Team Collaboration",
+            "Technical Leadership",
+            "Innovation Mindset"
         ],
         "languages": [
             "French (Native)",
@@ -57,7 +57,7 @@
     "education": [
         {
             "school": "École Centrale d'Électronique (ECE Paris)",
-            "degree": "Engineering Degree in Information Systems and Big Data Analytics",
+            "degree": "Engineering Degree in Computer Science and Big Data Analytics",
             "date": "Jan 2024",
             "distinction": "Top 5% of class",
             "specialization": "Specialization: Programming, Databases, Electronics, DevOps"
@@ -76,12 +76,11 @@
             "position": "Data Engineer/Data Analyst Intern",
             "dates": "Aug 2023 -- Jan 2024",
             "highlights": [
-                "Designed and implemented multiple data pipelines for business data ingestion.",
-                "Optimized data model and migrated distribution pipelines used for financial reporting of €844 billion in assets in 2023.",
-                "Tested new Databricks clusters and created a PoC (Proof of Concept) for sensitive data anonymization.",
-                "Created interactive dashboards for financial controllers.",
-                "Calculated KPI performance indicators for distributed vision (ME, OV, CIS, FX).",
-                "Worked on data quality and validation for reporting."
+                "Designed and implemented data pipelines for business data ingestion",
+                "Optimized data model and migrated distribution pipelines used for financial reporting of €844 billion in assets in 2023",
+                "Created a PoC (Proof of Concept) for sensitive data anonymization, emphasizing data security and privacy",
+                "Built interactive dashboards for financial KPIs monitoring",
+                "Collaborated with cross-functional teams to improve data processes and workflows"
             ]
         },
         {
@@ -89,9 +88,9 @@
             "position": "Software Engineer Intern",
             "dates": "Apr 2022 -- Aug 2022",
             "highlights": [
-                "Developed a blockchain explorer in Java/LevelDB (+1000 transactions per second).",
-                "Implemented new administration features for Kalima blockchain using Node.js.",
-                "Designed and developed a multi-signature authentication system for DApps (Decentralized Applications)."
+                "Developed a blockchain explorer in Java/LevelDB (+1000 transactions per second)",
+                "Implemented new administration features for Kalima blockchain using Node.js",
+                "Designed and developed a multi-signature authentication system for DApps (Decentralized Applications)"
             ]
         },
         {
@@ -99,8 +98,8 @@
             "position": "IT Intern",
             "dates": "Jan 2020 -- Feb 2020",
             "highlights": [
-                "Studied Microsoft Office migration from 2010 to 2016 and analyzed its impact on business processes.",
-                "Developed and executed test procedures on 23,000 workstations."
+                "Studied Microsoft Office migration from 2010 to 2016 and analyzed its impact on business processes",
+                "Developed and executed test procedures on 23,000 workstations"
             ]
         }
     ],
@@ -108,19 +107,19 @@
         {
             "name": "Bitcoin Analysis",
             "highlights": [
-                "Created a data pipeline using Python, SQL, Airflow, dbt, and Snowflake for Bitcoin transaction analysis, processing over 1 million transactions per day."
+                "Created a data pipeline using Python, SQL, Airflow, dbt, and Snowflake for Bitcoin transaction analysis, processing over 1 million transactions per day"
             ]
         },
         {
             "name": "Twitter Real-time Analysis",
             "highlights": [
-                "Developed a real-time visualization system for Twitter streams by topics using Kafka and KNN (K-Nearest Neighbors) algorithm."
+                "Developed a real-time visualization system for Twitter streams by topics using Kafka and KNN (K-Nearest Neighbors) algorithm"
             ]
         },
         {
             "name": "Energy Disaggregation @Capgemini",
             "highlights": [
-                "Extracted the temperature-sensitive component of energy consumption to forecast future demand in France."
+                "Extracted the temperature-sensitive component of energy consumption to forecast future demand in France"
             ]
         }
     ]

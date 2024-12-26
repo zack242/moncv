@@ -7,6 +7,22 @@ CV_TYPES=("engineer" "analyst" "software")
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PROJECT_ROOT="$( dirname "$SCRIPT_DIR" )"
 
+# Fonction pour nettoyer les fichiers temporaires
+clean_temp_files() {
+    local cv_type=$1
+    cd "$PROJECT_ROOT/output"
+    rm -f "cv_${cv_type}.aux" \
+          "cv_${cv_type}.log" \
+          "cv_${cv_type}.out" \
+          "cv_${cv_type}.toc" \
+          "cv_${cv_type}.nav" \
+          "cv_${cv_type}.snm" \
+          "cv_${cv_type}.synctex.gz" \
+          "cv_${cv_type}.fls" \
+          "cv_${cv_type}.fdb_latexmk"
+    cd "$PROJECT_ROOT"
+}
+
 # Fonction pour compiler un CV
 compile_cv() {
     local cv_type=$1
@@ -26,13 +42,13 @@ compile_cv() {
     
     if [ $? -ne 0 ]; then
         echo "Erreur lors de la compilation du PDF pour le CV $cv_type"
+        clean_temp_files "$cv_type"
         cd "$PROJECT_ROOT"
         return 1
     fi
     
-    # Nettoyer les fichiers intermédiaires
-    rm -f "cv_${cv_type}.aux" "cv_${cv_type}.log"
-    cd "$PROJECT_ROOT"
+    # Nettoyer les fichiers temporaires
+    clean_temp_files "$cv_type"
     
     echo "CV $cv_type généré avec succès"
 }
