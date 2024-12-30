@@ -1,83 +1,51 @@
 #!/bin/bash
 
-# Liste des types de CV disponibles
-CV_TYPES=("engineer" "analyst" "software")
+# Vérifier si un argument a été fourni
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <type_cv>"
+    echo "Types disponibles : engineer, analyst, software, ia, dev, analytics"
+    echo "(ajoutez _en ou _eng pour la version anglaise)"
+    exit 1
+fi
 
 # Obtenir le chemin absolu du répertoire du script
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PROJECT_ROOT="$( dirname "$SCRIPT_DIR" )"
 
-# Fonction pour nettoyer les fichiers temporaires
-clean_temp_files() {
-    local cv_type=$1
+# Créer les dossiers nécessaires s'ils n'existent pas
+mkdir -p "$PROJECT_ROOT/output"
+mkdir -p "$PROJECT_ROOT/mescvs"
+
+# Type de CV
+CV_TYPE="$1"
+echo "Génération du CV type: $CV_TYPE"
+
+# Générer le CV
+python "$SCRIPT_DIR/generate_cv.py" "$CV_TYPE"
+
+if [ $? -eq 0 ]; then
+    # Compiler le PDF
     cd "$PROJECT_ROOT/output"
-    rm -f "cv_${cv_type}.aux" \
-          "cv_${cv_type}.log" \
-          "cv_${cv_type}.out" \
-          "cv_${cv_type}.toc" \
-          "cv_${cv_type}.nav" \
-          "cv_${cv_type}.snm" \
-          "cv_${cv_type}.synctex.gz" \
-          "cv_${cv_type}.fls" \
-          "cv_${cv_type}.fdb_latexmk"
-    cd "$PROJECT_ROOT"
-}
-
-# Fonction pour compiler un CV
-compile_cv() {
-    local cv_type=$1
-    echo "Génération du CV type: $cv_type"
+    pdflatex "cv_${CV_TYPE}.tex"
     
-    # Générer le fichier .tex en utilisant le chemin absolu
-    python "$SCRIPT_DIR/generate_cv.py" "$cv_type"
-    
-    if [ $? -ne 0 ]; then
-        echo "Erreur lors de la génération du fichier .tex pour le CV $cv_type"
-        return 1
-    fi
-    
-    # Compiler le fichier .tex en PDF
-    cd "$PROJECT_ROOT/output"
-    pdflatex "cv_${cv_type}.tex"
-    
-    if [ $? -ne 0 ]; then
-        echo "Erreur lors de la compilation du PDF pour le CV $cv_type"
-        clean_temp_files "$cv_type"
-        cd "$PROJECT_ROOT"
-        return 1
-    fi
-    
-    # Nettoyer les fichiers temporaires
-    clean_temp_files "$cv_type"
-    
-    echo "CV $cv_type généré avec succès"
-}
-
-# Vérifier si le type de CV est valide
-check_cv_type() {
-    local cv_type=$1
-    # Enlever le suffixe _en si présent
-    local base_type=${cv_type%_en}
-    
-    for valid_type in "${CV_TYPES[@]}"; do
-        if [ "$base_type" = "$valid_type" ]; then
-            return 0
-        fi
-    done
-    return 1
-}
-
-# Si un argument est fourni, compiler uniquement ce type de CV
-if [ $# -eq 1 ]; then
-    if check_cv_type "$1"; then
-        compile_cv "$1"
+    if [ $? -eq 0 ]; then
+        # Copier le PDF dans mescvs
+        cp "cv_${CV_TYPE}.pdf" "../mescvs/"
+        echo "CV $CV_TYPE généré avec succès"
+        
+        # Nettoyer les fichiers temporaires
+        rm -f "cv_${CV_TYPE}.aux" \
+             "cv_${CV_TYPE}.log" \
+             "cv_${CV_TYPE}.out" \
+             "cv_${CV_TYPE}.toc" \
+             "cv_${CV_TYPE}.nav" \
+             "cv_${CV_TYPE}.snm" \
+             "cv_${CV_TYPE}.synctex.gz"
     else
-        echo "Type de CV invalide. Options disponibles : ${CV_TYPES[*]} (ajoutez _en pour la version anglaise)"
+        echo "Erreur lors de la compilation du PDF"
         exit 1
     fi
 else
-    # Compiler tous les types de CV
-    for cv_type in "${CV_TYPES[@]}"; do
-        compile_cv "$cv_type"
-    done
+    echo "Erreur lors de la génération du CV"
+    exit 1
 fi 

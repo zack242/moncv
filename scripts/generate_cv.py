@@ -240,32 +240,49 @@ def main():
     else:
         cv_type = "engineer"  # valeur par défaut
 
-    # Détecter si c'est une version anglaise
-    is_english = cv_type.endswith('_en')
-    base_type = cv_type.replace('_en', '')
+    # Obtenir le chemin du répertoire courant
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Détecter si c'est une version anglaise et extraire le type de base
+    is_english = False
+    base_type = cv_type
+    if cv_type.endswith('_en'):
+        is_english = True
+        base_type = cv_type[:-3]
+    elif cv_type.endswith('_eng'):
+        is_english = True
+        base_type = cv_type[:-4]
 
     # Mapping des types de CV vers les noms de fichiers
     cv_types = {
         "engineer": "cv_data_engineer{}.json",
         "analyst": "cv_data_analyst{}.json",
-        "software": "cv_data_software{}.json"
+        "software": "cv_data_software{}.json",
+        "ia": "cv_data_science_ia{}.json" if is_english else "cv_data_ia{}.json",
+        "dev": "cv_data_dev{}.json",
+        "analytics": "cv_data_analytics{}.json"
     }
 
     # Vérifier si le type de base de CV est valide
     if base_type not in cv_types:
-        print(f"Type de CV invalide. Options disponibles : {', '.join(cv_types.keys())}")
+        print(f"Type de CV invalide. Options disponibles : {', '.join(cv_types.keys())} (ajoutez _en ou _eng pour la version anglaise)")
         sys.exit(1)
 
-    # Ajouter le suffixe _en si nécessaire
-    suffix = "_en" if is_english else ""
+    # Ajouter le suffixe _en ou _eng selon le fichier
+    suffix = ""
+    if is_english:
+        # Vérifier d'abord si le fichier _eng existe, sinon utiliser _en
+        if os.path.exists(os.path.join(current_dir, '..', 'data', cv_types[base_type].format('_eng'))):
+            suffix = "_eng"
+        else:
+            suffix = "_en"
     json_filename = cv_types[base_type].format(suffix)
 
-    current_dir = os.path.dirname(os.path.abspath(__file__))
     json_path = os.path.join(current_dir, '..', 'data', json_filename)
     template_path = os.path.join(current_dir, '..', 'templates', 'cv_template.tex')
     output_path = os.path.join(current_dir, '..', 'output', f'cv_{cv_type}.tex')
 
-    print(f"Génération du CV de type {cv_type}...")
+    print(f"Génération du CV type: {cv_type}")
     print(f"Lecture des données depuis : {json_path}")
     print(f"Utilisation du template : {template_path}")
     print(f"Génération du fichier : {output_path}")
