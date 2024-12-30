@@ -1,40 +1,43 @@
 {
     "personal": {
         "name": "Zakaria TOZY",
-        "title": "Data Engineer",
+        "title": "Data Engineer | CDI",
         "contract": "Full-time",
         "phone": "0617407077",
         "email": "zakaria.tozy@icloud.com",
         "linkedin": "zakaria-tozy",
         "github": "github.com/zack242",
         "location": "Paris",
-        "summary": "Computer Science and Data Science Engineer with a dual degree (ECE Paris/Polytechnique), combining strong technical expertise in data engineering with experience in financial data processing at AXA IM. Passionate about building robust data platforms and implementing AI solutions, I am seeking to contribute to innovative and transformative projects."
+        "summary": "Computer Science and Data Science Engineer with a dual degree (ECE Paris/Polytechnique), combining technical expertise in data engineering with experience in financial data processing at AXA IM. Seeking to contribute to innovative projects."
     },
     "skills": {
         "programming": [
             "Python",
             "SQL",
-            "C#",
             "Java",
-            "C++"
+            "JavaScript",
+            "C++",
+            "C#"
         ],
-        "data_engineering": [
+        "data_cloud_engineering": [
             "PySpark",
             "ETL",
             "Data Pipelines",
-            "dbt"
-        ],
-        "cloud_databases": [
             "Databricks",
             "Snowflake",
             "GCP",
-            "NoSQL"
+            "Azure",
+            "S3",
+            "dbt",
+            "Airflow"
         ],
         "machine_learning": [
             "Scikit-Learn",
             "NLP",
             "Computer Vision",
-            "Deep Learning"
+            "Deep Learning",
+            "LLM",
+            "API Integration"
         ],
         "devops": [
             "Docker",
@@ -58,14 +61,14 @@
         {
             "school": "École Centrale d'Électronique (ECE Paris)",
             "degree": "Engineering Degree in Computer Science and Big Data Analytics",
-            "date": "Jan 2024",
+            "date": "January 2024",
             "distinction": "Top 5% of class",
             "specialization": "Specialization: Programming, Databases, Electronics, DevOps"
         },
         {
-            "school": "Institut Polytechnique de Paris (École polytechnique)",
+            "school": "Institut Polytechnique de Paris (École Polytechnique)",
             "degree": "Master's Degree in Data Science",
-            "date": "Jan 2024",
+            "date": "January 2024",
             "distinction": "With Highest Honors",
             "specialization": "Specialization: Machine Learning, Big Data, Cloud Infrastructure, Deep Learning, NLP"
         }
@@ -74,29 +77,28 @@
         {
             "company": "AXA Investment Managers - AXA IM",
             "position": "Data Engineer/Data Analyst Intern",
-            "dates": "Aug 2023 -- Jan 2024",
+            "dates": "August 2023 -- January 2024",
             "highlights": [
-                "Designed and implemented data pipelines for business data ingestion",
-                "Optimized data model and migrated distribution pipelines used for financial reporting of €844 billion in assets in 2023",
-                "Created a PoC (Proof of Concept) for sensitive data anonymization, emphasizing data security and privacy",
-                "Built interactive dashboards for financial KPIs monitoring",
-                "Collaborated with cross-functional teams to improve data processes and workflows"
+                "Designed and implemented data pipelines for business and historical data ingestion and management",
+                "Optimized data model and migrated distribution pipelines for financial reporting of €844 billion in assets",
+                "Tested new Databricks clusters and created a PoC for sensitive data anonymization",
+                "Built dashboards and calculated KPIs for distributed vision (ME, OV, CIS, FX)"
             ]
         },
         {
             "company": "Kalima Blockchain and IoT",
             "position": "Software Engineer Intern",
-            "dates": "Apr 2022 -- Aug 2022",
+            "dates": "April 2022 -- August 2022",
             "highlights": [
-                "Developed a blockchain explorer in Java/LevelDB (+1000 transactions per second)",
-                "Implemented new administration features for Kalima blockchain using Node.js",
-                "Designed and developed a multi-signature authentication system for DApps (Decentralized Applications)"
+                "Developed a proprietary Kalima blockchain explorer in Java/LevelDB (+1000 transactions per second)",
+                "Implemented new administration features for Kalima proprietary blockchain using Node.js",
+                "Designed and developed a multi-signature authentication system for DApps (Decentralized Applications) on Kalima blockchain"
             ]
         },
         {
             "company": "Le Crédit Lyonnais - LCL",
             "position": "IT Intern",
-            "dates": "Jan 2020 -- Feb 2020",
+            "dates": "January 2020 -- February 2020",
             "highlights": [
                 "Studied Microsoft Office migration from 2010 to 2016 and analyzed its impact on business processes",
                 "Developed and executed test procedures on 23,000 workstations"
@@ -113,11 +115,11 @@
         {
             "name": "Twitter Real-time Analysis",
             "highlights": [
-                "Developed a real-time visualization system for Twitter streams by topics using Kafka and KNN (K-Nearest Neighbors) algorithm"
+                "Developed a real-time visualization system for Twitter streams by subjects using Kafka and KNN (K-Nearest Neighbors) algorithm"
             ]
         },
         {
-            "name": "Energy Disaggregation @Capgemini",
+            "name": "Energy Disaggregation with Capgemini",
             "highlights": [
                 "Extracted the temperature-sensitive component of energy consumption to forecast future demand in France"
             ]

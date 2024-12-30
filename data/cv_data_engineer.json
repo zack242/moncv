@@ -1,40 +1,43 @@
 {
     "personal": {
         "name": "Zakaria TOZY",
-        "title": "Data Engineer",
+        "title": "Data Engineer | CDI",
         "contract": "CDI",
         "phone": "0617407077",
         "email": "zakaria.tozy@icloud.com",
         "linkedin": "zakaria-tozy",
         "github": "github.com/zack242",
         "location": "Paris",
-        "summary": "Ingénieur en Systèmes d'Information et Data Science avec une double formation (ECE Paris/Polytechnique), passionné par les données et les nouvelles technologies. Je recherche un poste en CDI pour contribuer à des projets innovants et à forte valeur ajoutée."
+        "summary": "Ingénieur en Systèmes d'Information et Data Science avec une double formation (ECE Paris/Polytechnique), combinant une expertise en ingénierie des données avec une expérience dans le traitement des données financières chez AXA IM. Je recherche un poste en CDI pour contribuer à des projets innovants."
     },
     "skills": {
         "programmation": [
             "Python",
             "SQL",
             "Java",
+            "JavaScript",
             "C++",
             "C#"
         ],
-        "data_engineering": [
+        "ingénierie_données_cloud": [
             "PySpark",
-            "BigQuery",
             "ETL",
-            "Data Pipelines"
-        ],
-        "cloud_databases": [
+            "Data Pipelines",
             "Databricks",
             "Snowflake",
             "GCP",
-            "dbt"
+            "Azure",
+            "S3",
+            "dbt",
+            "Airflow"
         ],
         "machine_learning": [
             "Scikit-Learn",
             "NLP",
             "Computer Vision",
-            "Deep Learning"
+            "Deep Learning",
+            "LLM",
+            "API Integration"
         ],
         "devops": [
             "Docker",
@@ -58,14 +61,14 @@
         {
             "school": "École Centrale d'Électronique (ECE Paris)",
             "degree": "Ingénieur en Systèmes d'Information et Big Data Analytics",
-            "date": "Janv 2024",
+            "date": "Janvier 2024",
             "distinction": "Top 5% de la promotion",
-            "specialization": "Spécialisation : Programmation, Bases de données, Électronique, DevOps"
+            "specialization": "Spécialisation : Programmation, Bases de données, Électronique, DevOps, Systèmes d'exploitation, Mathématiques, Statistiques"
         },
         {
-            "school": "Institut Polytechnique de Paris (Ecole polytechnique)",
+            "school": "Institut Polytechnique de Paris (École Polytechnique)",
             "degree": "Master 2 en Data Sciences",
-            "date": "Janv 2024",
+            "date": "Janvier 2024",
             "distinction": "Mention Très bien",
             "specialization": "Spécialisation : Machine Learning, Big Data, Cloud Infrastructure, Deep Learning, NLP"
         }
@@ -74,30 +77,28 @@
         {
             "company": "AXA Investment Managers - AXA IM",
             "position": "Data Engineer/Data Analyst Intern",
-            "dates": "Août 2023 -- Janv 2024",
+            "dates": "Août 2023 -- Janvier 2024",
             "highlights": [
-                "Conception et mise en place d'une dizaine de pipelines de données pour l'ingestion de données métiers.",
-                "Optimisation du modèle de données et migration des pipelines de distribution utilisés pour le reporting financier de 844 milliards d'euros d'actifs en 2023.",
-                "Tests de nouveaux clusters sur Databricks et création d'un PoC (Proof of Concept) pour l'anonymisation des données sensibles.",
-                "Création de tableaux de bord pour les contrôleurs financiers.",
-                "Calcul des indicateurs de performance KPIs pour la vision distribuée (ME, OV, CIS, FX).",
-                "Travail sur la qualité et la validation des données pour le reporting."
+                "Conception et mise en place de pipelines de données pour l'ingestion et la gestion des données métiers et historiques.",
+                "Optimisation du modèle de données et migration des pipelines de distribution pour le reporting financier de 844 milliards d'euros d'actifs.",
+                "Tests de nouveaux clusters Databricks et création d'un PoC pour l'anonymisation des données sensibles.",
+                "Création de tableaux de bord et calcul des KPIs pour la vision distribuée (ME, OV, CIS, FX)."
             ]
         },
         {
             "company": "Kalima Blockchain et IoT",
             "position": "Software Engineer Intern",
-            "dates": "Avr 2022 -- Août 2022",
+            "dates": "Avril 2022 -- Août 2022",
             "highlights": [
-                "Développement d'un explorateur de blockchain en Java/LevelDB (+1000 transactions par seconde).",
-                "Implémentation de nouvelles fonctionnalités d'administration pour la blockchain Kalima en Node.js.",
-                "Conception et développement d'un système d'authentification multisignature pour les DApps (Decentralized Applications)."
+                "Développement d'un explorateur de blockchain propriétaire Kalima en Java/LevelDB (+1000 transactions par seconde).",
+                "Implémentation de nouvelles fonctionnalités d'administration pour la blockchain propriétaire Kalima en Node.js.",
+                "Conception et développement d'un système d'authentification multisignature pour les DApps (Decentralized Applications) sur la blockchain Kalima."
             ]
         },
         {
             "company": "Le Crédit Lyonnais - LCL",
             "position": "IT Intern",
-            "dates": "Janv 2020 -- Fév 2020",
+            "dates": "Janvier 2020 -- Février 2020",
             "highlights": [
                 "Étude de migration Microsoft Office 2010 vers 2016 et analyse de son impact sur les processus métiers.",
                 "Développement et exécution de procédures de tests sur un parc de 23 000 postes de travail."
@@ -114,11 +115,11 @@
         {
             "name": "Twitter Real-time Analysis",
             "highlights": [
-                "Développement d'un système de visualisation en temps réel des flux Twitter par topics à l'aide de Kafka et de l'algorithme KNN (K-Nearest Neighbors)."
+                "Développement d'un système de visualisation en temps réel des flux Twitter par sujets à l'aide de Kafka et de l'algorithme KNN (K-Nearest Neighbors)."
             ]
         },
         {
-            "name": "Energy Disaggregation @Capgemini",
+            "name": "Energy Disaggregation avec Capgemini",
             "highlights": [
                 "Extraction de la composante thermosensible de la consommation énergétique pour prévoir la demande future en France."
             ]

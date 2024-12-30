@@ -18,6 +18,7 @@
 \usepackage{tabularx}
 \usepackage[utf8]{inputenc}
 \usepackage[left=0.5in, right=0.5in, top=0.1in, bottom=0.2in]{geometry}
+\usepackage{exscale}  % Pour la commande \HUGE
 
 \usepackage{fontawesome}
 \usepackage[scale=0.90,lf]{FiraMono}
@@ -97,10 +98,8 @@
     \includegraphics[width=3cm]{images/profilpicture.png}
   \end{minipage}%
   \begin{minipage}[c]{0.8\textwidth}
-    \hspace{10pt}
-    {\huge \textbf{{{name}}}} \\ \vspace{10pt}
-    \hspace{9pt}
-    {\normalsize {{title}}} \vspace{2pt}
+    {\Huge \textbf{{{name}}}} \\[5pt]
+    {\Large \textbf{{{title}}}}
   \end{minipage}
 \end{flushleft}
 
