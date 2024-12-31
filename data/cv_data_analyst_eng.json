@@ -1,0 +1,123 @@
+{
+    "personal": {
+        "name": "Zakaria TOZY",
+        "title": "Data Analyst | Data Engineer",
+        "contract": "Full-time",
+        "phone": "0617407077",
+        "email": "zakaria.tozy@icloud.com",
+        "linkedin": "zakaria-tozy",
+        "github": "github.com/zack242",
+        "location": "Paris",
+        "summary": "Computer Science and Data Science Engineer with a dual degree (ECE Paris/Polytechnique). Strong experience in financial data analysis and data engineering gained at AXA IM. Seeking a full-time position to leverage my technical and analytical skills."
+    },
+    "skills": {
+        "data_analysis": [
+            "Pandas",
+            "NumPy",
+            "Data Visualization",
+            "Excel"
+        ],
+        "programming": [
+            "Python",
+            "SQL",
+            "JavaScript"
+        ],
+        "cloud_databases": [
+            "BigQuery",
+            "Snowflake",
+            "GCP",
+            "dbt"
+        ],
+        "data_engineering": [
+            "ETL",
+            "Data Pipelines",
+            "Data Quality"
+        ],
+        "machine_learning": [
+            "Scikit-Learn",
+            "NLP",
+            "LLM"
+        ],
+        "soft_skills": [
+            "Communication",
+            "Analytical Thinking",
+            "Rigor",
+            "Adaptability",
+            "Problem Solving"
+        ],
+        "languages": [
+            "French (Native)",
+            "Arabic (Native)",
+            "English (Fluent - TOEIC 875)"
+        ]
+    },
+    "education": [
+        {
+            "school": "École Centrale d'Électronique (ECE Paris)",
+            "degree": "Engineering Degree in Computer Science and Big Data Analytics",
+            "date": "January 2024",
+            "distinction": "Top 5% of class",
+            "specialization": "Specialization: Programming, Databases, Electronics, DevOps"
+        },
+        {
+            "school": "Institut Polytechnique de Paris (École Polytechnique)",
+            "degree": "Master's Degree in Data Science",
+            "date": "January 2024",
+            "distinction": "With Highest Honors",
+            "specialization": "Specialization: Machine Learning, Big Data, Cloud Infrastructure, Deep Learning, NLP"
+        }
+    ],
+    "experience": [
+        {
+            "company": "AXA Investment Managers - AXA IM",
+            "position": "Data Engineer/Data Analyst Intern",
+            "dates": "August 2023 -- January 2024",
+            "highlights": [
+                "Created and optimized interactive dashboards for financial KPI monitoring",
+                "Designed data pipelines for business data ingestion and analysis",
+                "Analyzed and reported financial KPIs (ME, OV, CIS, FX) for tracking €844 billion in assets",
+                "Implemented sensitive data anonymization solutions on Databricks",
+                "Worked on data quality and validation for reporting purposes"
+            ]
+        },
+        {
+            "company": "Kalima Blockchain and IoT",
+            "position": "Software Engineer Intern",
+            "dates": "April 2022 -- August 2022",
+            "highlights": [
+                "Developed a proprietary Kalima blockchain explorer in Java/LevelDB (+1000 transactions per second)",
+                "Implemented new administration features for Kalima proprietary blockchain using Node.js",
+                "Analyzed performance and monitored blockchain metrics"
+            ]
+        },
+        {
+            "company": "Le Crédit Lyonnais - LCL",
+            "position": "IT Intern",
+            "dates": "January 2020 -- February 2020",
+            "highlights": [
+                "Analyzed impact of Microsoft Office migration from 2010 to 2016 on business processes",
+                "Created detailed reports on tests performed on 23,000 workstations"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Bitcoin Analysis",
+            "highlights": [
+                "Created a data pipeline using Python, SQL, Airflow, and Snowflake for Bitcoin transaction analysis, including visualizations and analytical reports"
+            ]
+        },
+        {
+            "name": "Twitter Real-time Analysis",
+            "highlights": [
+                "Developed a real-time analysis system for Twitter streams using Kafka and KNN algorithm, with trend visualization by topic"
+            ]
+        },
+        {
+            "name": "Energy Consumption Analysis @Capgemini",
+            "highlights": [
+                "Analyzed temperature-sensitive component of energy consumption and created models for demand forecasting in France"
+            ]
+        }
+    ]
+}

@@ -29,9 +29,11 @@ if [ $? -eq 0 ]; then
     pdflatex "cv_${CV_TYPE}.tex"
     
     if [ $? -eq 0 ]; then
+        echo "CV généré avec succès dans output/cv_${CV_TYPE}.pdf"
+        
         # Copier le PDF dans mescvs
         cp "cv_${CV_TYPE}.pdf" "../mescvs/"
-        echo "CV $CV_TYPE généré avec succès"
+        echo "CV copié avec succès dans mescvs/cv_${CV_TYPE}.pdf"
         
         # Nettoyer les fichiers temporaires
         rm -f "cv_${CV_TYPE}.aux" \
@@ -41,6 +43,8 @@ if [ $? -eq 0 ]; then
              "cv_${CV_TYPE}.nav" \
              "cv_${CV_TYPE}.snm" \
              "cv_${CV_TYPE}.synctex.gz"
+        
+        echo "CV $CV_TYPE généré et copié avec succès !"
     else
         echo "Erreur lors de la compilation du PDF"
         exit 1
