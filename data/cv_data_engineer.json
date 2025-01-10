@@ -8,7 +8,7 @@
         "linkedin": "zakaria-tozy",
         "github": "zack242",
         "location": "Paris",
-        "summary": "Ingénieur diplômé d'un double cursus en systèmes d'information et data science, avec une forte passion pour l'IA et les nouvelles technologies. Expérience en tant que Data Engineer chez AXA IM, je suis à la recherche d'un CDI pour innover dans le domaine de la data et de l'intelligence artificielle."
+        "summary": "Jeune ingénieur diplômé d'un double cursus en systèmes d'information et data science, avec une forte passion pour la data, l'IA et les nouvelles technologies. Je resors fort d'une expérience en tant que Data Engineer / Data analyst au sein de AXA IM, et je suis à la recherche d'un CDI pour mettre en pratiques mes competences."
     },
     "skills": {
         "programmation": [
@@ -17,14 +17,16 @@
             "Java",
             "JavaScript"
         ],
-        "ingénierie_données_cloud": [
-            "(PySpark,Hadoop)",
-            "(Databricks,Snowflake)",
-            "(Azure,GCP,S3)",
+        "data_engineering": [
+            "PySpark",
+            "Databricks,Snowflake",
+            "Azure,GCP,S3",
             "dbt"
         ],
         "machine_learning": [
             "Scikit-Learn",
+            "Pandas",
+            "Numpy",
             "NLP",
             "LLM"
         ],
@@ -33,14 +35,9 @@
             "CI/CD",
             "Git"
         ],
-        "certifications": [
-            "HackerRank SQL (Expert) - 2024",
-            "IBM Introduction to data engineering - 2024",
-            "GCP Professional Data Engineer (en cours)"
-        ],
         "soft_skills": [
-            "Autonomie",
-            "Rigueur",
+            "Autonome",
+            "Rigoureux",
             "Esprit d'analyse",
             "Apprentissage rapide"
         ],
@@ -69,18 +66,17 @@
     "experience": [
         {
             "company": "Projet Personnel",
-            "position": "Ingénieur Blockchain",
+            "position": "Ingénieur Blockchain - Dévellopement d'un sniper bot en Rust",
             "dates": "Février 2024 -- Juin 2024",
             "highlights": [
-                "Monitoring de tous les tokens créés sur la blockchain Solana en Rust",
-                "Mise en place d'un système pour acheter ces tokens dès leur création (moins de 1s)",
-                "Vente automatique des tokens après réalisation d'une plus-value",
-                "Déploiement sur DigitalOcean avec Docker"
+                "Monitoring de tous les tokens créés sur la blockchain Solana",
+                "Mise en place d'un système pour acheter ces tokens dès leur création en moins de 1s",
+                "Vente automatique des tokens après réalisation d'une plus-value"
             ]
         },
         {
             "company": "AXA Investment Managers - AXA IM",
-            "position": "Stage de Fin d'Études - Data Engineer",
+            "position": "Stage de Fin d'Études - Data Engineer / Data Analyst",
             "dates": "Août 2023 -- Janvier 2024",
             "highlights": [
                 "Conception et mise en place de pipelines de données pour l'ingestion et la gestion des données métiers",
@@ -112,55 +108,25 @@
     "projects": [
         {
             "name": "Bitcoin Analysis",
-            "date": "Août 2023",
+            "date": "Août 2024",
             "highlights": [
                 "Création d'un pipeline de données avec Python, SQL, Airflow, dbt et Snowflake pour l'analyse des transactions Bitcoin, traitant plus de 1 million de transactions par jour."
             ]
         },
         {
             "name": "Twitter Real-time Analysis",
-            "date": "Juin 2022",
+            "date": "Avril 2023",
             "highlights": [
                 "Développement d'un système de visualisation en temps réel des flux Twitter par sujets à l'aide de Kafka et de l'algorithme KNN (K-Nearest Neighbors)."
             ]
         },
         {
-            "name": "Energy Disaggregation avec Capgemini",
-            "date": "Mars 2021",
-            "highlights": [
-                "Extraction de la composante thermosensible de la consommation énergétique pour prévoir la demande future en France."
-            ]
-        },
-        {
-            "name": "Analyse des Communications FED avec Natixis",
-            "date": "Novembre 2023",
-            "highlights": [
-                "Développement d'un modèle NLP basé sur FinBERT pour l'analyse de sentiment des communications de la FED",
-                "Mise en place d'un pipeline de traitement des données textuelles pour l'extraction d'insights financiers"
-            ]
-        },
-        {
-            "name": "Data Quality Monitoring System",
-            "date": "Septembre 2022",
-            "highlights": [
-                "Conception et implémentation d'un système de monitoring de la qualité des données avec Great Expectations",
-                "Intégration avec Airflow pour l'automatisation des contrôles de qualité et la génération de rapports"
-            ]
-        },
-        {
             "name": "Agent AI Autonome",
-            "date": "Décembre 2023",
+            "date": "Novembre 2024",
             "highlights": [
-                "Développement d'un agent AI autonome utilisant le framework a16z pour l'automatisation de tâches complexes",
-                "Implémentation d'une architecture de prise de décision basée sur les LLMs avec gestion de contexte et mémoire"
-            ]
-        },
-        {
-            "name": "AI de Persuasion",
-            "date": "Octobre 2023",
-            "highlights": [
-                "Développement d'un système d'IA conversationnel spécialisé dans la persuasion et l'argumentation",
-                "Implémentation de techniques avancées de NLP pour l'analyse et la génération de discours persuasif"
+                "Développement d'un agent AI autonome utilisant le framework ai16z",
+                "Deploiment de l'agent ai sur Twitter dans le but d'interagir avec les utilisateurs",
+                "Utilisation de l'api de open ai pour la génération de réponses"
             ]
         }
     ]
