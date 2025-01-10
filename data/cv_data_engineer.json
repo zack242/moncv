@@ -1,14 +1,14 @@
 {
     "personal": {
         "name": "Zakaria TOZY",
-        "title": "Data Engineer | CDI",
+        "title": "Data Engineer | Software Engineer ",
         "contract": "CDI",
         "phone": "0617407077",
         "email": "zakaria.tozy@icloud.com",
         "linkedin": "zakaria-tozy",
         "github": "zack242",
         "location": "Paris",
-        "summary": "Jeune ingénieur diplômé d'un double cursus en systèmes d'information et data science, avec une forte passion pour la data, l'IA et les nouvelles technologies. Je resors fort d'une expérience en tant que Data Engineer / Data analyst au sein de AXA IM, et je suis à la recherche d'un CDI pour mettre en pratiques mes competences."
+        "summary": "Ingénieur diplômé d'un double cursus en systèmes d'information et data science, passionné par la data, l'intelligence artificielle et les technologies innovantes. Enrichi d'une expérience significative en tant que Data Engineer et Data Analyst chez AXA IM, je suis à la recherche d'un CDI pour valoriser et approfondir mes compétences techniques."
     },
     "skills": {
         "programmation": [
@@ -19,8 +19,11 @@
         ],
         "data_engineering": [
             "PySpark",
-            "Databricks,Snowflake",
-            "Azure,GCP,S3",
+            "Databricks",
+            "Snowflake",
+            "Azure",
+            "GCP",
+            "S3",
             "dbt"
         ],
         "machine_learning": [
@@ -38,13 +41,12 @@
         "soft_skills": [
             "Autonome",
             "Rigoureux",
-            "Esprit d'analyse",
-            "Apprentissage rapide"
+            "Fort esprit d'analyse"
         ],
         "langues": [
             "Français (Bilingue)",
             "Arabe (Bilingue)",
-            "Anglais (Courant - TOEIC 875)"
+            "Anglais (Professionnel - TOEIC 875)"
         ]
     },
     "education": [
@@ -53,25 +55,25 @@
             "degree": "Ingénieur en Systèmes d'Information et Big Data Analytics",
             "date": "Janvier 2024",
             "distinction": "Top 5% de la promotion",
-            "specialization": "Spécialisation : Programmation, Bases de données, Électronique"
+            "specialization": "Programmation, Bases de données, Électronique"
         },
         {
             "school": "Institut Polytechnique de Paris (École Polytechnique)",
             "degree": "Master 2 en Data Sciences",
             "date": "Janvier 2024",
             "distinction": "Mention Très bien",
-            "specialization": "Spécialisation : Machine Learning, Big Data, Cloud Infrastructure, Deep Learning, NLP"
+            "specialization": "Machine Learning, Big Data, Cloud Infrastructure, Deep Learning, NLP"
         }
     ],
     "experience": [
         {
             "company": "Projet Personnel",
-            "position": "Ingénieur Blockchain - Dévellopement d'un sniper bot en Rust",
+            "position": "Ingénieur Blockchain - Développement d'un sniper bot en Rust",
             "dates": "Février 2024 -- Juin 2024",
             "highlights": [
-                "Monitoring de tous les tokens créés sur la blockchain Solana",
-                "Mise en place d'un système pour acheter ces tokens dès leur création en moins de 1s",
-                "Vente automatique des tokens après réalisation d'une plus-value"
+                "Monitoring de toutes les pools de liquidité de la blockchain Solana.",
+                "Mise en place d'un système pour acheter ces tokens dès leur création en moins de 1 seconde.",
+                "Automatisation de la revente des tokens après réalisation d'une plus-value."
             ]
         },
         {
@@ -79,10 +81,10 @@
             "position": "Stage de Fin d'Études - Data Engineer / Data Analyst",
             "dates": "Août 2023 -- Janvier 2024",
             "highlights": [
-                "Conception et mise en place de pipelines de données pour l'ingestion et la gestion des données métiers",
-                "Optimisation du modèle de données et migration des pipelines de distribution pour le reporting financier de 844 milliards d'euros d'actifs",
-                "Tests de nouveaux clusters Databricks et création d'un PoC pour l'anonymisation des données sensibles",
-                "Création de tableaux de bord et calcul des KPIs pour la vision distribuée (ME, OV, CIS, FX)"
+                "Conception et mise en place de pipelines de données pour l'ingestion et la gestion des données métiers.",
+                "Optimisation du modèle de données et migration des pipelines de distribution pour le reporting financier.",
+                "Tests de nouveaux clusters Databricks et création d'un PoC pour l'anonymisation des données sensibles.",
+                "Création de tableaux de bord et calcul des KPIs pour la vision distribuée (ME, OV, CIS, FX)."
             ]
         },
         {
@@ -90,43 +92,37 @@
             "position": "Stage - Software Engineer",
             "dates": "Avril 2022 -- Août 2022",
             "highlights": [
-                "Développement d'un explorateur de blockchain propriétaire Kalima en Java/LevelDB (+1000 transactions par seconde)",
-                "Implémentation de nouvelles fonctionnalités d'administration pour la blockchain propriétaire Kalima en Node.js",
-                "Conception et développement d'un système d'authentification multisignature pour les DApps (Decentralized Applications)"
-            ]
-        },
-        {
-            "company": "Le Crédit Lyonnais - LCL",
-            "position": "Stage - IT Support",
-            "dates": "Janvier 2020 -- Février 2020",
-            "highlights": [
-                "Étude de migration Microsoft Office 2010 vers 2016 et analyse de son impact sur les processus métiers",
-                "Développement et exécution de procédures de tests sur un parc de 23 000 postes de travail"
+                "Développement d'un explorateur de blockchain propriétaire Kalima en Java/LevelDB.",
+                "Implémentation de nouvelles fonctionnalités d'administration pour la blockchain Kalima en Node.js.",
+                "Conception et développement d'un système d'authentification multisignature pour les DApps (Decentralized Applications)."
             ]
         }
     ],
     "projects": [
         {
-            "name": "Bitcoin Analysis",
-            "date": "Août 2024",
+            "name": "Pipeline d'Analyse Blockchain",
+            "date": "Septembre 2024",
             "highlights": [
-                "Création d'un pipeline de données avec Python, SQL, Airflow, dbt et Snowflake pour l'analyse des transactions Bitcoin, traitant plus de 1 million de transactions par jour."
+                "Création d'une solution cloud pour l'analyse des transactions Bitcoin",
+                "Conception et implémentation d'un pipeline de données moderne (Python, SQL, Airflow, dbt, Snowflake)"
             ]
         },
         {
-            "name": "Twitter Real-time Analysis",
+            "name": "Analyse en Temps Réel des Réseaux Sociaux",
             "date": "Avril 2023",
             "highlights": [
-                "Développement d'un système de visualisation en temps réel des flux Twitter par sujets à l'aide de Kafka et de l'algorithme KNN (K-Nearest Neighbors)."
+                "Création d'une plateforme d'analyse des tendances et sentiments sur Twitter en temps réel",
+                "Développement d'un système de classification par topics avec Kafka",
+                "Implémentation d'un algorithme de clustering KNN pour la détection de tendances émergentes"
             ]
         },
         {
-            "name": "Agent AI Autonome",
+            "name": "Système Multi-Agents IA",
             "date": "Novembre 2024",
             "highlights": [
-                "Développement d'un agent AI autonome utilisant le framework ai16z",
-                "Deploiment de l'agent ai sur Twitter dans le but d'interagir avec les utilisateurs",
-                "Utilisation de l'api de open ai pour la génération de réponses"
+                "Développement d'un système conversationnel innovant basé sur deux agents IA autonomes",
+                "Intégration de l'API OpenAI pour la génération de réponses contextuelles et pertinentes",
+                "Déploiement sur Twitter permettant aux agents d'interagir avec les utilisateurs en temps réel"
             ]
         }
     ]

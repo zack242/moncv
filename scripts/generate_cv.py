@@ -11,31 +11,20 @@ def clean_text(text):
     if isinstance(text, (list, dict)):
         return text
     
-    # Traitement spécial pour "Top X%"
-    if "%" in str(text) and "Top" in str(text):
-        return text.replace("%", "\\%")
-    
     text = str(text)
-    text = text.replace("'", "'")
     
     replacements = {
-        '&': '\\&',
+        '\\': '$\\backslash$',
         '%': '\\%',
+        '_': '\\_',
+        '&': '\\&',
         '$': '\\$',
         '#': '\\#',
-        '_': '\\_',
         '{': '\\{',
         '}': '\\}',
         '~': '\\textasciitilde{}',
         '^': '\\textasciicircum{}',
-        '\\': '\\textbackslash{}',
-        '@': '\\@',
-        '<': '\\textless{}',
-        '>': '\\textgreater{}',
-        '|': '\\textbar{}',
-        '`': '\\`{}',
-        '"': "''",
-        '--': '---'
+        '|': '\\textbar{}'
     }
     
     for old, new in replacements.items():
