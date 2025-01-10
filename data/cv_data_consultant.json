@@ -1,14 +1,14 @@
 {
     "personal": {
         "name": "Zakaria TOZY",
-        "title": "Data Analyst | CDI",
+        "title": "Consultant Data et IA | CDI",
         "contract": "CDI",
         "phone": "0617407077",
         "email": "zakaria.tozy@icloud.com",
         "linkedin": "zakaria-tozy",
         "github": "github.com/zack242",
         "location": "Paris",
-        "summary": "Ingénieur en Systèmes d'Information et Data Science avec une double formation (ECE Paris/Polytechnique). Expérience significative en analyse de données financières chez AXA IM, avec une expertise dans le traitement et l'analyse des KPIs financiers. Je recherche un poste en Data Analysis pour mettre à profit mes compétences en finance et data."
+        "summary": "Ingénieur en Systèmes d'Information et Data Science avec une double formation (ECE Paris/Polytechnique). Solide expérience en analyse de données financières et data engineering acquise chez AXA IM, avec une forte capacité à accompagner les équipes métiers. Je recherche un poste en conseil pour mettre à profit mes compétences techniques et analytiques."
     },
     "skills": {
         "data_analysis": [
@@ -39,11 +39,11 @@
             "LLM"
         ],
         "soft_skills": [
-            "Communication",
+            "Esprit d'équipe",
             "Esprit d'analyse",
+            "Vulgarisation technique",
             "Rigueur",
-            "Adaptabilité",
-            "Curiosité"
+            "Goût pour l'innovation"
         ],
         "langues": [
             "Français (Bilingue)",
@@ -74,8 +74,8 @@
             "dates": "Août 2023 -- Janvier 2024",
             "highlights": [
                 "Création et optimisation de tableaux de bord interactifs pour le suivi des KPIs financiers",
-                "Conception de pipelines de données pour l'ingestion et l'analyse des données métiers",
-                "Analyse et reporting des KPIs financiers (ME, OV, CIS, FX) pour le suivi de 844 milliards d'euros d'actifs",
+                "Conception de pipelines de données en méthodologie Agile",
+                "Analyse et présentation des KPIs financiers aux équipes métiers",
                 "Implémentation de solutions d'anonymisation des données sensibles sur Databricks",
                 "Travail sur la qualité et la validation des données pour le reporting"
             ]

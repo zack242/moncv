@@ -1,0 +1,124 @@
+{
+    "personal": {
+        "name": "Zakaria TOZY",
+        "title": "Data Scientist | CDI",
+        "contract": "CDI",
+        "phone": "0617407077",
+        "email": "zakaria.tozy@icloud.com",
+        "linkedin": "zakaria-tozy",
+        "github": "github.com/zack242",
+        "location": "Paris",
+        "summary": "Data Scientist avec une double formation (École Polytechnique/ECE Paris). Je recherche un poste en Data Science pour contribuer à des projets innovants."
+    },
+    "skills": {
+        "machine_learning": [
+            "TensorFlow",
+            "Scikit-Learn",
+            "Deep Learning",
+            "NLP",
+            "Computer Vision"
+        ],
+        "data_analysis": [
+            "Python",
+            "SQL",
+            "Jupyter Notebooks"
+        ],
+        "data_engineering": [
+            "ETL",
+            "Data Pipelines",
+            "PySpark",
+            "Databricks"
+        ],
+        "cloud": [
+            "AWS",
+            "GCP",
+            "Azure"
+        ],
+        "soft_skills": [
+            "Autonomie",
+            "Rigueur",
+            "Esprit d'analyse",
+            "Communication",
+            "Travail en équipe"
+        ],
+        "langues": [
+            "Français (Bilingue)",
+            "Arabe (Bilingue)",
+            "Anglais (Courant - TOEIC 875)"
+        ]
+    },
+    "education": [
+        {
+            "school": "Institut Polytechnique de Paris (École Polytechnique)",
+            "degree": "Master 2 en Data Sciences",
+            "date": "Janvier 2024",
+            "distinction": "Mention Très bien",
+            "specialization": "Spécialisation : Machine Learning, Deep Learning, NLP, Statistiques Avancées, Analyse Quantitative"
+        },
+        {
+            "school": "École Centrale d'Électronique (ECE Paris)",
+            "degree": "Ingénieur en Systèmes d'Information et Big Data Analytics",
+            "date": "Janvier 2024",
+            "distinction": "Top 5% de la promotion",
+            "specialization": "Spécialisation : Mathématiques Appliquées, Statistiques, Machine Learning, Analyse de Données"
+        }
+    ],
+    "experience": [
+        {
+            "company": "AXA Investment Managers - AXA IM",
+            "position": "Data Scientist Intern",
+            "dates": "Août 2023 -- Janvier 2024",
+            "highlights": [
+                "Développement et optimisation de modèles prédictifs pour l'analyse des données financières",
+                "Analyse statistique et création de tableaux de bord pour le suivi des KPIs financiers (844 milliards d'euros d'actifs)",
+                "Implémentation de solutions d'anonymisation des données sensibles avec des techniques de ML",
+                "Collaboration avec les équipes métiers pour l'interprétation et la présentation des résultats"
+            ]
+        },
+        {
+            "company": "Kalima Blockchain et IoT",
+            "position": "Data Scientist Intern",
+            "dates": "Avril 2022 -- Août 2022",
+            "highlights": [
+                "Développement d'algorithmes d'analyse de données pour le monitoring des transactions",
+                "Implémentation de modèles prédictifs pour l'analyse des performances",
+                "Analyse statistique des données blockchain pour l'optimisation des performances"
+            ]
+        },
+        {
+            "company": "Le Crédit Lyonnais - LCL",
+            "position": "IT Intern",
+            "dates": "Janvier 2020 -- Février 2020",
+            "highlights": [
+                "Étude de migration Microsoft Office 2010 vers 2016 et analyse de son impact sur les processus métiers",
+                "Développement et exécution de procédures de tests sur un parc de 23 000 postes de travail"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Data Challenge @Natixis",
+            "highlights": [
+                "Analyse des données textuelles de la FED avec FinBERT dans le but de prédire son impact sur le marché, application des techniques de NLP dans le contexte financier"
+            ]
+        },
+        {
+            "name": "Bitcoin Analysis",
+            "highlights": [
+                "Analyse prédictive des transactions Bitcoin (1M+ par jour) avec Python et techniques de ML"
+            ]
+        },
+        {
+            "name": "Twitter Sentiment Analysis",
+            "highlights": [
+                "Développement d'un modèle de classification des sentiments en temps réel utilisant des techniques de NLP et ML"
+            ]
+        },
+        {
+            "name": "Désagrégation de la Courbe Énergétique @Capgemini",
+            "highlights": [
+                "Modélisation statistique et deep learning pour la prédiction de la consommation énergétique"
+            ]
+        }
+    ]
+}

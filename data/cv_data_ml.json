@@ -1,0 +1,124 @@
+{
+    "personal": {
+        "name": "Zakaria TOZY",
+        "title": "Data/ML Engineer | CDI",
+        "contract": "CDI",
+        "phone": "0617407077",
+        "email": "zakaria.tozy@icloud.com",
+        "linkedin": "zakaria-tozy",
+        "github": "github.com/zack242",
+        "location": "Paris",
+        "summary": "Ingénieur en Data Science avec une double formation (École Polytechnique/ECE Paris), spécialisé en Machine Learning et Data Engineering. Je recherche un poste en CDI pour contribuer à des projets innovants."
+    },
+    "skills": {
+        "machine_learning": [
+            "TensorFlow",
+            "Scikit-Learn",
+            "Deep Learning",
+            "NLP"
+        ],
+        "data_engineering": [
+            "PySpark",
+            "Databricks",
+            "ETL",
+            "Data Pipelines",
+            "dbt"
+        ],
+        "cloud": [
+            "GCP",
+            "AWS",
+            "Azure",
+            "Docker"
+        ],
+        "programmation": [
+            "Python",
+            "SQL",
+            "Java"
+        ],
+        "soft_skills": [
+            "Autonomie",
+            "Rigueur",
+            "Esprit d'analyse",
+            "Apprentissage rapide"
+        ],
+        "langues": [
+            "Français (Bilingue)",
+            "Arabe (Bilingue)",
+            "Anglais (Courant - TOEIC 875)"
+        ]
+    },
+    "education": [
+        {
+            "school": "Institut Polytechnique de Paris (École Polytechnique)",
+            "degree": "Master 2 en Data Sciences",
+            "date": "Janvier 2024",
+            "distinction": "Mention Très bien",
+            "specialization": "Spécialisation : Deep Learning, NLP, Machine Learning, Cloud Computing"
+        },
+        {
+            "school": "École Centrale d'Électronique (ECE Paris)",
+            "degree": "Ingénieur en Systèmes d'Information et Big Data Analytics",
+            "date": "Janvier 2024",
+            "distinction": "Top 5% de la promotion",
+            "specialization": "Spécialisation : Data Engineering, Machine Learning, Statistiques Avancées"
+        }
+    ],
+    "experience": [
+        {
+            "company": "AXA Investment Managers - AXA IM",
+            "position": "Data Engineer/Data Analyst Intern",
+            "dates": "Août 2023 -- Janvier 2024",
+            "highlights": [
+                "Conception et mise en place de pipelines de données sur Databricks pour l'ingestion et la gestion des données métiers",
+                "Optimisation du modèle de données et migration des pipelines de distribution",
+                "Tests de nouveaux clusters Databricks et création d'un PoC pour l'anonymisation des données",
+                "Création de tableaux de bord et calcul des KPIs financiers"
+            ]
+        },
+        {
+            "company": "Kalima Blockchain et IoT",
+            "position": "Software Engineer Intern",
+            "dates": "Avril 2022 -- Août 2022",
+            "highlights": [
+                "Développement d'un explorateur de blockchain propriétaire en Java/LevelDB (1000+ TPS)",
+                "Implémentation d'algorithmes d'analyse de données pour le monitoring des transactions",
+                "Conception d'un système d'authentification sécurisé"
+            ]
+        },
+        {
+            "company": "Le Crédit Lyonnais - LCL",
+            "position": "IT Intern",
+            "dates": "Janvier 2020 -- Février 2020",
+            "highlights": [
+                "Étude de migration Microsoft Office 2010 vers 2016 et analyse de son impact sur les processus métiers",
+                "Développement et exécution de procédures de tests sur un parc de 23 000 postes de travail"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Data Challenge @Natixis",
+            "highlights": [
+                "Analyse des données textuelles de la FED avec FinBERT dans le but de prédire son impact sur le marché"
+            ]
+        },
+        {
+            "name": "Bitcoin Analysis",
+            "highlights": [
+                "Pipeline de données (Python, SQL, Airflow, dbt, Snowflake) pour l'analyse de 1M+ transactions Bitcoin par jour"
+            ]
+        },
+        {
+            "name": "Twitter Sentiment Analysis",
+            "highlights": [
+                "Pipeline temps réel utilisant Kafka et un KNN pour la classification des sentiments en temps réel et en topic"
+            ]
+        },
+        {
+            "name": "Désagrégation de la Courbe Énergétique @Capgemini",
+            "highlights": [
+                "Extraction de la composante thermosensible de la consommation énergétique avec un modèle statistique et un réseau de neurones"
+            ]
+        }
+    ]
+}

@@ -260,7 +260,10 @@ def main():
         "software": "cv_data_software{}.json",
         "ia": "cv_data_science_ia{}.json" if is_english else "cv_data_ia{}.json",
         "dev": "cv_data_dev{}.json",
-        "analytics": "cv_data_analytics{}.json"
+        "analytics": "cv_data_analytics{}.json",
+        "consultant": "cv_data_consultant{}.json",
+        "ml": "cv_data_ml{}.json",
+        "ds": "cv_data_ds{}.json"
     }
 
     # Vérifier si le type de base de CV est valide
